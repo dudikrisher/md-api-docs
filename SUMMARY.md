@@ -3,10 +3,12 @@
 * [Introduction](README.md)
 * [Technical Guidelines](master-1.md)
 
-## Trading App APIs
+## Market Data APIs
 
-* [Market Data API](trading-app-apis/market-data/README.md)
-  * [Copy of Market Data API](trading-app-apis/market-data/market-data.md)
+* [Market Data API](market-data-apis/market-data/README.md)
+  * [Partial Order Book](market-data-apis/market-data/market-data.md)
+  * [Light Tickers](market-data-apis/market-data/market-data-1.md)
+  * [Live Trades](market-data-apis/market-data/market-data-2.md)
 
 ## Release Notes
 
