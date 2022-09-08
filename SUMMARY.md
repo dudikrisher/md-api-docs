@@ -1,12 +1,12 @@
 # Table of contents
 
 * [Introduction](README.md)
-  * [Best Practices](readme/best-practices.md)
 * [Technical Guidelines](master-1.md)
 
 ## Trading App APIs
 
-* [Market Data API](trading-app-apis/market-data.md)
+* [Market Data API](trading-app-apis/market-data/README.md)
+  * [Copy of Market Data API](trading-app-apis/market-data/market-data.md)
 
 ## Release Notes
 
