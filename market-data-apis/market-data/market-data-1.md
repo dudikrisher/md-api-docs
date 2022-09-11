@@ -1,7 +1,3 @@
----
-description: Allows to get market data from system
----
-
 # Light Tickers
 
 ## lightTickers

@@ -1,10 +1,4 @@
----
-description: Allows to get market data from system
----
-
 # Live Trades
-
-Market data API is using the same websocket endpoint as the Reporting API.
 
 ## liveTrades
 
