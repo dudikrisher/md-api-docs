@@ -7,7 +7,7 @@ Trade will come sorted by time, old trades will come first. \
 When snapshot is completed, the last trade will be sent again, but quantity field will be set to 0.&#x20;
 
 {% hint style="info" %}
-`endpoint:` v1/exchange.marketdata/liveTrades
+`qualifier:` v1/exchange.marketdata/liveTrades
 {% endhint %}
 
 ### **Request**
