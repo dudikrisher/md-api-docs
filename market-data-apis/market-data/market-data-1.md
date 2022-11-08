@@ -17,15 +17,22 @@ This API allows easy refresh of the instruments market data.
 
 ### **Response**
 
-| Parameter   | Type           | Description                                                 |
-| ----------- | -------------- | ----------------------------------------------------------- |
-| symbol      | String         | Instrument symbol                                           |
-| lastPrice   | Decimal        | last execution price                                        |
-| bidPrice    | Decimal        | Highest bid price                                           |
-| bidQuantity | Decimal        | Sum of quantity of all orders with `bidPrice`               |
-| askPrice    | Decimal        | Lowest ask price                                            |
-| askQuantity | Decimal        | Sum of quantity of all orders with the `askPrice`           |
-| timeStamp   | Unix timestamp | Latest timestamp where one of the above values was changed  |
+| Parameter                    | Type           | Description                                                                                             |
+| ---------------------------- | -------------- | ------------------------------------------------------------------------------------------------------- |
+| symbol                       | String         | Instrument symbol                                                                                       |
+| lastPrice                    | Decimal        | last execution price                                                                                    |
+| bidPrice                     | Decimal        | Highest bid price                                                                                       |
+| bidQuantity                  | Decimal        | Sum of quantity of all orders with `bidPrice`                                                           |
+| askPrice                     | Decimal        | Lowest ask price                                                                                        |
+| askQuantity                  | Decimal        | Sum of quantity of all orders with the `askPrice`                                                       |
+| timeStamp                    | Unix timestamp | Latest timestamp where one of the above values was changed                                              |
+| openingPrice                 | Decimal        | First order book trade on the day, will be empty until first execution is happening                     |
+| low                          | Decimal        | Lowest order book executed price of the day                                                             |
+| high `new`                   | Decimal        | Highest order book executed price of the day                                                            |
+| volume`new`                  | Decimal        | Total trade volume (in base asset)                                                                      |
+| quoteVolume `new`            | Decimal        | <p>Total trade volume in quote asset<br><span class="math"> \xi (Trade Amount * Trade Price)</span></p> |
+| lastClosingPrice `new`       | Decimal        | Last day closing price (=last order book trade on the day)                                              |
+| closingPriceTimestamp  `new` | Unix timestamp | The time with where closing price was determined                                                        |
 
 ### **Error Codes**
 
@@ -58,12 +65,16 @@ This API allows easy refresh of the instruments market data.
   "sid": 10,
   "d": {
     "symbol": "AMZ",
-    "lastPrice": 100.5,
-    "bidPrice": 100.5,
-    "bidQuantity": 10.25,
-    "askPrice": 100.6,
-    "askQuantity": 1.3,
-    "timeStamp": 1646549579452
+    "lastPrice": 1.3,
+    "bidPrice": 1.3,
+    "bidQuantity": 1.67,
+    "askPrice": 1.35,
+    "askQuantity": 2,
+    "timeStamp": 1667317150356,
+    "low": 1,
+    "high": 1.4,
+    "volume": 20.54,
+    "quoteVolume": 24.419
   }
 }
 ```

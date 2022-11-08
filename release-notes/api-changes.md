@@ -2,6 +2,10 @@
 
 ## Coming Soon...  :hammer\_pick:
 
+
+
+## 2022-09-13✔️
+
 `lightTickers` API will have new properties, that are referring to the current trading day :
 
 * lastClosingPrice - last execution prive before market close&#x20;
