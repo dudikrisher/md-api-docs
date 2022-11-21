@@ -4,6 +4,10 @@
 
 TBD
 
+## 2022-**11**-21✔️
+
+`getSettlementPrices` API  will response with the latest results updated in system. &#x20;
+
 ## 2022-09-13✔️
 
 `lightTickers` API will have new properties, that are referring to the current trading day :
