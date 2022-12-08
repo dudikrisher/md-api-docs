@@ -31,8 +31,8 @@ This API allows easy refresh of the instruments market data.
 | high `new`                   | Decimal        | Highest order book executed price of the day                                                            |
 | volume`new`                  | Decimal        | Total trade volume (in base asset)                                                                      |
 | quoteVolume `new`            | Decimal        | <p>Total trade volume in quote asset<br><span class="math"> \xi (Trade Amount * Trade Price)</span></p> |
-| lastClosingPrice `new`       | Decimal        | Last day closing price (=last order book trade on the day)                                              |
-| closingPriceTimestamp  `new` | Unix timestamp | The time with where closing price was determined                                                        |
+| closingPrice `new`           | Decimal        | Last day closing price (=last order book trade on the day)                                              |
+| closingPriceTimestamp  `new` | Unix timestamp | The time where closing price was determined                                                             |
 
 ### **Error Codes**
 
@@ -62,19 +62,22 @@ This API allows easy refresh of the instruments market data.
 ```javascript
 {
   "q": "v1/exchange.marketdata/lightTickers",
-  "sid": 10,
+  "sid": 11,
   "d": {
-    "symbol": "AMZ",
-    "lastPrice": 1.3,
-    "bidPrice": 1.3,
-    "bidQuantity": 1.67,
-    "askPrice": 1.35,
-    "askQuantity": 2,
-    "timeStamp": 1667317150356,
-    "low": 1,
-    "high": 1.4,
-    "volume": 20.54,
-    "quoteVolume": 24.419
+    "symbol": "Test1Feb23",
+    "lastPrice": 4.99,
+    "bidPrice": 4.01,
+    "bidQuantity": 3.91,
+    "askPrice": 4.99,
+    "askQuantity": 1.33,
+    "timeStamp": 1670511325058,
+    "openingPrice": 4.99,
+    "low": 4.89,
+    "high": 5.99,
+    "volume": 1.33,
+    "quoteVolume": 6.6367,
+    "closingPrice": 4.01,
+    "closingPriceTimestamp": 1670511325058
   }
 }
 ```
