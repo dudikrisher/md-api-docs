@@ -4,6 +4,34 @@
 
 TBD
 
+## 2023-01-03  :hammer\_pick:
+
+All API has a new optional header parameter - we strongly recommend to use it instead of the previous `environments.exchangeNum`  (which is still supported), the new parameter provides more accurate and efficient instrument discovery.&#x20;
+
+The parameter is called `token` and can be retrieved from Admin application under home page:
+
+<img src="../.gitbook/assets/image (3).png" alt="" data-size="original">  &#x20;
+
+
+
+Sample API using new parameter:
+
+```json
+{
+  "q": "v1/exchange.marketdata/lightTickers",
+  "token": "eyJleGNoYW5nZUlkIjozMCwicHJvamVjdElkIjoyMDB9",
+  "sid": 10,
+  "d": {
+    "symbols": [
+      "ABC",
+      "XYZ",
+      "INS1"
+    ],
+    "interval": 1000
+  }
+}
+```
+
 ## 2022-**11**-21✔️
 
 `getSettlementPrices` API  will response with the latest results updated in system. &#x20;
