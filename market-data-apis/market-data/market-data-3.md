@@ -36,6 +36,7 @@ This API allows  retrieve the settlement prices for all instruments or for a spe
 ```json
 {
   "q": "v1/exchange.marketdata/getSettlementPrices",
+  "token": "eyJleGNoYW5nZUlkIjozMCwicHJvamVjdElkIjoyMDB9",
   "sid": 10,
   "d": {
     "symbols": [

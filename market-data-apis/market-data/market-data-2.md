@@ -36,6 +36,7 @@ When snapshot is completed, the last trade will be sent again, but quantity fiel
 ```json
 {
   "q": "v1/exchange.marketdata/liveTrades",
+  "token": "eyJleGNoYW5nZUlkIjozMCwicHJvamVjdElkIjoyMDB9",
   "sid": 153,
   "d": {
     "symbol": "AMZ",

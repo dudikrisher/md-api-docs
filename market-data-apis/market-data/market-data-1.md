@@ -49,6 +49,7 @@ This API allows easy refresh of the instruments market data.
 ```javascript
 {
   "q": "v1/exchange.marketdata/lightTickers",
+  "token": "eyJleGNoYW5nZUlkIjozMCwicHJvamVjdElkIjoyMDB9",
   "sid": 10,
   "d": {
     "symbols": ["AMZN","INS1"],

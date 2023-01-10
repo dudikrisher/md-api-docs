@@ -10,15 +10,17 @@ Within the valid `JSON` please be aware that:
 
 ### **Request Parameters**
 
-| Parameter | Type   | Description                                                                                                                                                                                                                                   |
-| --------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| q         | String | qualifier, contains the method for the specific API call.                                                                                                                                                                                     |
-| sid       | Int    | stream identifier, for each WebSocket connection this is a unique identifier for the API call. Please note that as long as the sid was not ended (other by exchange or by consumer) this can’t be used again on the same WebSocket connection |
-| d         | Json   | data object, contain the request body                                                                                                                                                                                                         |
+| Parameter                                            | Type   | Description                                                                                                                                                                                                                                   |
+| ---------------------------------------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| q                                                    | String | qualifier, contains the method for the specific API call.                                                                                                                                                                                     |
+| <p><mark style="color:blue;">NEW</mark><br>token</p> | String | <p>Token is configurable value per environment, it allows accurate and efficient instrument discovery. <br>Token generation described on the <a href="./">Introduction </a>section.</p>                                                       |
+| sid                                                  | Int    | stream identifier, for each WebSocket connection this is a unique identifier for the API call. Please note that as long as the sid was not ended (other by exchange or by consumer) this can’t be used again on the same WebSocket connection |
+| d                                                    | Json   | data object, contain the request body                                                                                                                                                                                                         |
 
 ```javascript
 { 
  "q":"exchange.market/placeOrder", 
+ "token": "eyJleGNoYW5nZUlkIjozMCwicHJvamVjdElkIjoyMDB9",
  "sid":1, 
  "d": 
    { 

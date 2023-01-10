@@ -47,6 +47,7 @@ This API allows easy refresh of the book state without the need to calculate the
 ```javascript
 {
   "q": "v1/exchange.marketdata/partialOrderBook",
+  "token": "eyJleGNoYW5nZUlkIjozMCwicHJvamVjdElkIjoyMDB9",
   "sid": 10,
   "d": {
     "symbol": "INS1",
