@@ -4,7 +4,7 @@
 
 TBD
 
-## 2023-01-03  :hammer\_pick:
+## 2023-01-03  ✔️
 
 All API has a new optional header parameter - we strongly recommend to use it instead of the previous `environments.exchangeNum`  (which is still supported), the new parameter provides more accurate and efficient instrument discovery.&#x20;
 
