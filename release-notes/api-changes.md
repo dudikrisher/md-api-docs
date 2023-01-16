@@ -4,6 +4,10 @@
 
 TBD
 
+## 2023-01-18  :hammer\_pick:
+
+[market-data.md](../market-data-apis/market-data/market-data.md "mention") will publish events only in case there is change in data. Once there is change- it will be sent only when interval time elapsed.
+
 ## 2023-01-03  ✔️
 
 All API has a new optional header parameter - we strongly recommend to use it instead of the previous `environments.exchangeNum`  (which is still supported), the new parameter provides more accurate and efficient instrument discovery.&#x20;
