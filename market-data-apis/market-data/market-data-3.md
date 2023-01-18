@@ -2,7 +2,8 @@
 
 ## getSettlementPrices
 
-This API allows  retrieve the settlement prices for all instruments or for a specific list of instruments.&#x20;
+This API allows  retrieve the settlement prices for all instruments or for a specific list of instruments. \
+Stream is bounded stream, after sending the relvant responses, stream will be closed.&#x20;
 
 {% hint style="info" %}
 `qualifier:` v1/exchange.marketdata/getSettlementPrices
@@ -62,7 +63,7 @@ This API allows  retrieve the settlement prices for all instruments or for a spe
 ```
 {% endtab %}
 
-{% tab title="Last Message" %}
+{% tab title="Stream Closure" %}
 ```json
 {
   "sig": 1,
