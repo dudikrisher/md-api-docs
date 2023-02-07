@@ -4,6 +4,14 @@
 
 ## 2023-02-08  :hammer\_pick:
 
+There are new fields in the light ticker API:
+
+* settlementPrice: Settlement price
+* settlementPriceTimestamp: Settlement price last update timestamp
+* lastQuantity: Last executed trade quantity
+
+
+
 Until now in case one of the symbols is wrong, the entire stream was disconnected.
 
 From now on, in case of wrong symbol stream will continue working for the valid symbols and for the invalid symbols the message returned will be:
