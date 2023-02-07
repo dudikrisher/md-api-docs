@@ -2,7 +2,26 @@
 
 ## Coming Soon...  :hammer\_pick:
 
-TBD
+## 2023-02-08  :hammer\_pick:
+
+Until now in case one of the symbols is wrong, the entire stream was disconnected.
+
+From now on, in case of wrong symbol stream will continue working for the valid symbols and for the invalid symbols the message returned will be:
+
+```json
+{
+  "q": "v1/exchange.marketdata/lightTickers",
+  "sid": 10,
+  "d": {
+    "symbol": "Ins1",
+    "bidQuantity": 0,
+    "askQuantity": 0,
+    "timeStamp":1675769165802,
+    "errorCode": 3,
+    "errorMessage": "Wrong symbol" 
+  }
+}
+```
 
 ## 2023-01-18  ✔️
 
