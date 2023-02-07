@@ -31,6 +31,8 @@ From now on, in case of wrong symbol stream will continue working for the valid 
 }
 ```
 
+This error might occur in case that stream is already working (in case symbol is no longer active instrument).
+
 ## 2023-01-18  ✔️
 
 [market-data.md](../market-data-apis/market-data/market-data.md "mention") will publish events only in case there is change in data. Once there is change- it will be sent only when interval time elapsed.
