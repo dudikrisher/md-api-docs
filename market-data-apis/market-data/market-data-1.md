@@ -22,6 +22,7 @@ Upon subscription data for all instruments will sent, afterward, data for specif
 | ------------------------------ | -------------- | ------------------------------------------------------------------------------------------------------- |
 | symbol                         | String         | Instrument symbol                                                                                       |
 | lastPrice                      | Decimal        | last execution price                                                                                    |
+| lastQuantity `new`             | Decimal        | Last executed trade quantity                                                                            |
 | bidPrice                       | Decimal        | Highest bid price                                                                                       |
 | bidQuantity                    | Decimal        | Sum of quantity of all orders with `bidPrice`                                                           |
 | askPrice                       | Decimal        | Lowest ask price                                                                                        |
@@ -35,16 +36,7 @@ Upon subscription data for all instruments will sent, afterward, data for specif
 | closingPrice                   | Decimal        | Last day closing price (=last order book trade on the day)                                              |
 | closingPriceTimestamp          | Unix timestamp | The time where closing price was determined                                                             |
 | settlementPrice`new`           | Decimal        | Settlement price                                                                                        |
-| settlementPriceTimestamp `new` | Unix timestamp | The last time that was update in the settlement price                                                   |
-| lastQuantity `new`             | Decimal        | Execution quantity                                                                                      |
-
-### **Error Codes**
-
-| Code | Message                                          |
-| ---- | ------------------------------------------------ |
-| 1    | System is unavailable                            |
-| 2    | Missing fields: \[Fieldname]                     |
-| 3    | <p>Wrong interval |<br>Wrong symbol [symbol]</p> |
+| settlementPriceTimestamp `new` | Unix timestamp | Settlement price last update timestamp                                                                  |
 
 ### **Samples**
 
@@ -68,22 +60,25 @@ Upon subscription data for all instruments will sent, afterward, data for specif
 ```javascript
 {
   "q": "v1/exchange.marketdata/lightTickers",
-  "sid": 11,
+  "sid": 10,
   "d": {
-    "symbol": "Test1Feb23",
-    "lastPrice": 4.99,
-    "bidPrice": 4.01,
-    "bidQuantity": 3.91,
-    "askPrice": 4.99,
-    "askQuantity": 1.33,
-    "timeStamp": 1670511325058,
-    "openingPrice": 4.99,
-    "low": 4.89,
-    "high": 5.99,
-    "volume": 1.33,
-    "quoteVolume": 6.6367,
-    "closingPrice": 4.01,
-    "closingPriceTimestamp": 1670511325058
+    "symbol": "INS10",
+    "lastPrice": 0.3333,
+    "lastQuantity": 0.23,
+    "bidPrice": 0.3333,
+    "bidQuantity": 1.1,
+    "askPrice": 0.4455,
+    "askQuantity": 3.77,
+    "timeStamp": 1675869327183,
+    "openingPrice": 1.3333,
+    "low": 0.3333,
+    "high": 1.3333,
+    "volume": 12.09,
+    "quoteVolume": 10.083385,
+    "closingPrice": 1,
+    "closingPriceTimestamp": 1675807200002,
+    "settlementPrice": 1.12,
+    "settlementPriceTimestamp": 1673793853931
   }
 }
 ```
@@ -101,6 +96,54 @@ Upon subscription data for all instruments will sent, afterward, data for specif
     "timeStamp": 1674115200000,
     "volume": 0,
     "quoteVolume": 0
+  }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+### **Error Codes**
+
+| Code | Message                                 |
+| ---- | --------------------------------------- |
+| 1    | System is unavailable                   |
+| 2    | Missing fields: \[Fieldname]            |
+| 3    | <p>Wrong interval |<br>Wrong symbol</p> |
+
+Note: unlike other errors, in case of `Wrong symbol` , stream will continue working for the valid symbols.&#x20;
+
+This error might returned on the subscription but also in case that stream is already working but instrument was updated so that symbol is no longer active instrument.
+
+### **Error Samples**
+
+{% tabs %}
+{% tab title="Error" %}
+```json
+{
+  "sig": 2,
+  "q": "v1/exchange.marketdata/lightTickers",
+  "errorType": "500",
+  "sid": 10,
+  "d": {
+    "errorCode": 3,
+    "errorMessage": "Wrong interval"
+  }
+}
+```
+{% endtab %}
+
+{% tab title="Wrong Symbol" %}
+```json
+{
+  "q": "v1/exchange.marketdata/lightTickers",
+  "sid": 10,
+  "d": {
+    "symbol": "Ins1",
+    "bidQuantity": 0,
+    "askQuantity": 0,
+    "timeStamp":1675769165802,
+    "errorCode": 3,
+    "errorMessage": "Wrong symbol" 
   }
 }
 ```

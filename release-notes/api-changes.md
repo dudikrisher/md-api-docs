@@ -2,11 +2,9 @@
 
 ## Coming Soon...  :hammer\_pick:
 
-## 2023-02-07✔️
 
-* new fields in the light ticker - settlementPrice, settlementPriceTimestamp, lastQuantity
 
-## 2023-02-08  :hammer\_pick:
+## 2023-02-08  ✔️
 
 There are new fields in the light ticker API:
 
