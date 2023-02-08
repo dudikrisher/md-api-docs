@@ -18,22 +18,25 @@ Upon subscription data for all instruments will sent, afterward, data for specif
 
 ### **Response**
 
-| Parameter                    | Type           | Description                                                                                             |
-| ---------------------------- | -------------- | ------------------------------------------------------------------------------------------------------- |
-| symbol                       | String         | Instrument symbol                                                                                       |
-| lastPrice                    | Decimal        | last execution price                                                                                    |
-| bidPrice                     | Decimal        | Highest bid price                                                                                       |
-| bidQuantity                  | Decimal        | Sum of quantity of all orders with `bidPrice`                                                           |
-| askPrice                     | Decimal        | Lowest ask price                                                                                        |
-| askQuantity                  | Decimal        | Sum of quantity of all orders with the `askPrice`                                                       |
-| timeStamp                    | Unix timestamp | Latest timestamp where one of the above values was changed                                              |
-| openingPrice                 | Decimal        | First order book trade on the day, will be empty until first execution is happening                     |
-| low                          | Decimal        | Lowest order book executed price of the day                                                             |
-| high `new`                   | Decimal        | Highest order book executed price of the day                                                            |
-| volume`new`                  | Decimal        | Total trade volume (in base asset)                                                                      |
-| quoteVolume `new`            | Decimal        | <p>Total trade volume in quote asset<br><span class="math"> \xi (Trade Amount * Trade Price)</span></p> |
-| closingPrice `new`           | Decimal        | Last day closing price (=last order book trade on the day)                                              |
-| closingPriceTimestamp  `new` | Unix timestamp | The time where closing price was determined                                                             |
+| Parameter                      | Type           | Description                                                                                             |
+| ------------------------------ | -------------- | ------------------------------------------------------------------------------------------------------- |
+| symbol                         | String         | Instrument symbol                                                                                       |
+| lastPrice                      | Decimal        | last execution price                                                                                    |
+| bidPrice                       | Decimal        | Highest bid price                                                                                       |
+| bidQuantity                    | Decimal        | Sum of quantity of all orders with `bidPrice`                                                           |
+| askPrice                       | Decimal        | Lowest ask price                                                                                        |
+| askQuantity                    | Decimal        | Sum of quantity of all orders with the `askPrice`                                                       |
+| timeStamp                      | Unix timestamp | Latest timestamp where one of the above values was changed                                              |
+| openingPrice                   | Decimal        | First order book trade on the day, will be empty until first execution is happening                     |
+| low                            | Decimal        | Lowest order book executed price of the day                                                             |
+| high                           | Decimal        | Highest order book executed price of the day                                                            |
+| volume                         | Decimal        | Total trade volume (in base asset)                                                                      |
+| quoteVolume                    | Decimal        | <p>Total trade volume in quote asset<br><span class="math"> \xi (Trade Amount * Trade Price)</span></p> |
+| closingPrice                   | Decimal        | Last day closing price (=last order book trade on the day)                                              |
+| closingPriceTimestamp          | Unix timestamp | The time where closing price was determined                                                             |
+| settlementPrice`new`           | Decimal        | Settlement price                                                                                        |
+| settlementPriceTimestamp `new` | Unix timestamp | The last time that was update in the settlement price                                                   |
+| lastQuantity `new`             | Decimal        | Execution quantity                                                                                      |
 
 ### **Error Codes**
 
