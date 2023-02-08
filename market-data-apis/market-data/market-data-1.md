@@ -60,6 +60,7 @@ Upon subscription data for all instruments will sent, afterward, data for specif
     "interval": 2000
   }
 }
+
 ```
 {% endtab %}
 
@@ -92,12 +93,14 @@ Upon subscription data for all instruments will sent, afterward, data for specif
 ```javascript
 {
   "q": "v1/exchange.marketdata/lightTickers",
-  "sid": 10,
+  "sid": 12,
   "d": {
     "symbol": "INS10",
     "bidQuantity": 0,
     "askQuantity": 0,
-    "timeStamp": 1646661691612
+    "timeStamp": 1674115200000,
+    "volume": 0,
+    "quoteVolume": 0
   }
 }
 ```
