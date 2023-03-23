@@ -2,7 +2,9 @@
 
 ## Coming Soon...  :hammer\_pick:
 
+## 2023-03-22✔️
 
+* Adding the trading status of the instrument to the light ticker response
 
 ## 2023-02-08  ✔️
 
