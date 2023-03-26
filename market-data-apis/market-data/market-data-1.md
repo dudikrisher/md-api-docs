@@ -22,7 +22,7 @@ Upon subscription data for all instruments will sent, afterward, data for specif
 | ------------------------- | -------------- | ------------------------------------------------------------------------------------------------------- |
 | symbol                    | String         | Instrument symbol                                                                                       |
 | lastPrice                 | Decimal        | last execution price                                                                                    |
-| lastQuantity `new`        | Decimal        | Last executed trade quantity                                                                            |
+| lastQuantity              | Decimal        | Last executed trade quantity                                                                            |
 | bidPrice                  | Decimal        | Highest bid price                                                                                       |
 | bidQuantity               | Decimal        | Sum of quantity of all orders with `bidPrice`                                                           |
 | askPrice                  | Decimal        | Lowest ask price                                                                                        |
