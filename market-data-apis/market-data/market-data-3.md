@@ -11,9 +11,9 @@ Stream is bounded stream, after sending the relvant responses, stream will be cl
 
 ### **Request**
 
-| Parameter | Type      | Description                                                                                                              |
-| --------- | --------- | ------------------------------------------------------------------------------------------------------------------------ |
-| symbols   | \[]String | <p>List of symbols to retrieve the settlement prices for.<br>Keep empty to get settlement prices for all instruments</p> |
+| Parameter | Type      | Description                                                                                                                                                                                     |
+| --------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| symbols   | \[]String | <p>List of symbols to retrieve the settlement prices for.<br>Keep empty to get settlement prices for all instruments<br><br>Disabled instruments with settlement price are also returned.  </p> |
 
 ### **Response**
 
