@@ -11,33 +11,15 @@ Upon subscription data for all instruments will sent, afterward, data for specif
 
 ### **Request**
 
-| Parameter | Type      | Description                                                      |
-| --------- | --------- | ---------------------------------------------------------------- |
-| symbols   | \[]String | List of symbols to retrieve the light tickers for                |
-| interval  | eNum      | Response interval in milliseconds, allowed values: 100,1000,2000 |
+<table><thead><tr><th width="146.17225950782998">Parameter</th><th width="94">Type</th><th width="446.2">Description</th></tr></thead><tbody><tr><td>symbols</td><td>[]String</td><td>List of symbols to retrieve the light tickers for </td></tr><tr><td>interval</td><td>eNum</td><td>Response interval in milliseconds, allowed values: 100,1000,2000</td></tr></tbody></table>
 
 ### **Response**
 
-| Parameter                 | Type           | Description                                                                                             |
-| ------------------------- | -------------- | ------------------------------------------------------------------------------------------------------- |
-| symbol                    | String         | Instrument symbol                                                                                       |
-| lastPrice                 | Decimal        | last execution price                                                                                    |
-| lastQuantity              | Decimal        | Last executed trade quantity                                                                            |
-| bidPrice                  | Decimal        | Highest bid price                                                                                       |
-| bidQuantity               | Decimal        | Sum of quantity of all orders with `bidPrice`                                                           |
-| askPrice                  | Decimal        | Lowest ask price                                                                                        |
-| askQuantity               | Decimal        | Sum of quantity of all orders with the `askPrice`                                                       |
-| timeStamp                 | Unix timestamp | Latest timestamp where one of the above values was changed                                              |
-| openingPrice              | Decimal        | First order book trade on the day, will be empty until first execution is happening                     |
-| low                       | Decimal        | Lowest order book executed price of the day                                                             |
-| high                      | Decimal        | Highest order book executed price of the day                                                            |
-| volume                    | Decimal        | Total trade volume (in base asset)                                                                      |
-| quoteVolume               | Decimal        | <p>Total trade volume in quote asset<br><span class="math"> \xi (Trade Amount * Trade Price)</span></p> |
-| closingPrice              | Decimal        | Last day closing price (=last order book trade on the day)                                              |
-| closingPriceTimestamp     | Unix timestamp | The time where closing price was determined                                                             |
-| settlementPrice           | Decimal        | Settlement price                                                                                        |
-| settlementPriceTimestamp  | Unix timestamp | Settlement price last update timestamp                                                                  |
-| status `new`              | Enum           | <p>The trading status of the instrument.<br>Trading/ Closed/ Halted/ AuctionCall/ AuctionCrossing</p>   |
+<table><thead><tr><th width="175.6710763680096">Parameter</th><th width="132">Type</th><th width="423.2">Description</th></tr></thead><tbody><tr><td>symbol</td><td>String</td><td>Instrument symbol </td></tr><tr><td>lastPrice</td><td>Decimal</td><td>last execution price <mark style="color:blue;">NEW</mark> (including the data from the trade entry)</td></tr><tr><td>lastQuantity </td><td>Decimal</td><td>Last executed trade quantity <mark style="color:blue;">NEW</mark> (including the data from the trade entry)</td></tr><tr><td>bidPrice</td><td>Decimal</td><td>Highest bid price</td></tr><tr><td>bidQuantity</td><td>Decimal</td><td>Sum of quantity of all orders with <code>bidPrice</code></td></tr><tr><td>askPrice</td><td>Decimal</td><td>Lowest ask price</td></tr><tr><td>askQuantity</td><td>Decimal</td><td>Sum of quantity of all orders with the <code>askPrice</code></td></tr><tr><td>timeStamp</td><td>Unix timestamp</td><td>Latest timestamp where one of the above values was changed </td></tr><tr><td>openingPrice</td><td>Decimal</td><td>First order book trade on the day, will be empty until first execution is happening</td></tr><tr><td>low</td><td>Decimal</td><td>Lowest order book executed price of the day <mark style="color:blue;">NEW</mark> (including the data from the trade entry)</td></tr><tr><td>high </td><td>Decimal</td><td>Highest order book executed price of the day <mark style="color:blue;">NEW</mark> (including the data from the trade entry)</td></tr><tr><td>volume</td><td>Decimal</td><td>Total trade volume (in base asset) <mark style="color:blue;">NEW</mark> (including the data from the trade entry)</td></tr><tr><td>quoteVolume </td><td>Decimal</td><td>Total trade volume in quote asset<br><span class="math"> \xi (Trade Amount * Trade Price)</span> <mark style="color:blue;">NEW</mark> (including the data from the trade entry)</td></tr><tr><td>closingPrice </td><td>Decimal</td><td>Last day closing price (=last order book trade on the day)</td></tr><tr><td>closingPriceTimestamp  </td><td>Unix timestamp</td><td>The time where closing price was determined</td></tr><tr><td>settlementPrice</td><td>Decimal</td><td>Settlement price</td></tr><tr><td>settlementPriceTimestamp </td><td>Unix timestamp</td><td>Settlement price last update timestamp</td></tr><tr><td>status</td><td>Enum</td><td>The trading status of the instrument.<br>Trading/ Closed/ Halted/ AuctionCall/ AuctionCrossing</td></tr><tr><td><mark style="color:blue;">NEW</mark> referencePrice </td><td>Decimal</td><td>Reference Price to be considered on the daily price bands and market rate circuit breakers. </td></tr><tr><td><mark style="color:blue;">NEW</mark> referencePriceTimestamp</td><td>Unix timestamp</td><td>Reference Price last update timestamp</td></tr><tr><td><mark style="color:blue;">NEW</mark> volumeTypes</td><td>[] Object</td><td>Array of all relevant volumes</td></tr></tbody></table>
+
+<mark style="color:blue;">NEW</mark> volumeTypes object:
+
+<table><thead><tr><th width="124.33333333333331">Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>type</td><td>Enum</td><td><p>The type of the volume:</p><ul><li>MATCHED: Order book trades </li><li>EFRP: EFRP trade entry</li><li>BLOCK: Block trade entry </li><li>OTHER: Other trade entry</li></ul></td></tr><tr><td>volume</td><td>Decimal</td><td>Total trade volume (in base asset) for the specific volume type</td></tr></tbody></table>
 
 ### **Samples**
 
@@ -80,7 +62,27 @@ Upon subscription data for all instruments will sent, afterward, data for specif
     "closingPrice": 1,
     "closingPriceTimestamp": 1675807200002,
     "settlementPrice": 1.12,
-    "settlementPriceTimestamp": 1673793853931
+    "settlementPriceTimestamp": 1673793853931,
+    "volumeTypes": [
+    {
+      "type": "EFRP",
+      "volume": 1234
+    },
+    {
+      "type": "Block",
+      "volume": 5555
+    },
+   {
+      "type": "Other",
+      "volume": 6666
+    },
+    {
+      "type": "Matched",
+      "volume": 7878
+    },
+    "referencePrice": 1.68,
+    "referencePriceTimestamp": 1686002400000
+  ]
   }
 }
 ```
@@ -107,11 +109,7 @@ Upon subscription data for all instruments will sent, afterward, data for specif
 
 ### **Error Codes**
 
-| Code | Message                                 |
-| ---- | --------------------------------------- |
-| 1    | System is unavailable                   |
-| 2    | Missing fields: \[Fieldname]            |
-| 3    | <p>Wrong interval |<br>Wrong symbol</p> |
+<table><thead><tr><th width="169.57142857142856">Code</th><th>Message</th></tr></thead><tbody><tr><td>1</td><td>System is unavailable</td></tr><tr><td>2</td><td>Missing fields: [Fieldname]</td></tr><tr><td>3</td><td>Wrong interval |<br>Wrong symbol</td></tr></tbody></table>
 
 Note: unlike other errors, in case of `Wrong symbol` , stream will continue working for the valid symbols.&#x20;
 

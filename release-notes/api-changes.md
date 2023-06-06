@@ -2,6 +2,14 @@
 
 ## Coming Soon...  :hammer\_pick:
 
+## 2023-06-06✔️
+
+* Adding new fields to the light ticker
+* Taking the trade entry data considered in some fields in the light ticker (volume, quoteVolume, high, low, lastPrice, lastQuantity)
+* Adding the trade entry and trade cancellation to the live trades.
+  * new value in quantity in case of cancellation
+  * makerSide will be in this case: -1
+
 ## 2023-03-22✔️
 
 * Adding the trading status of the instrument to the light ticker response
