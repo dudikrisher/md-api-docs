@@ -2,6 +2,8 @@
 
 ## Coming Soon...  :hammer\_pick:
 
+* volumeTypes object in the light ticker will be sent only if there is data that is not 0&#x20;
+
 ## 2023-06-06✔️
 
 * Adding new fields to the light ticker
