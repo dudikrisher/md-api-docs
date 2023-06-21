@@ -2,6 +2,8 @@
 
 ## Coming Soon...  :hammer\_pick:
 
+## 2023-06-21✔️
+
 * volumeTypes object in the light ticker will be sent only if there is data that is not 0&#x20;
 
 ## 2023-06-06✔️
@@ -11,6 +13,10 @@
 * Adding the trade entry and trade cancellation to the live trades.
   * new value in quantity in case of cancellation
   * makerSide will be in this case: -1
+
+## 2023-05-02✔️
+
+* Adding the reference price and timestamp of the instrument to the light ticker response
 
 ## 2023-03-22✔️
 
