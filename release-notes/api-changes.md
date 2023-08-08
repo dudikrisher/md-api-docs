@@ -2,6 +2,10 @@
 
 ## Coming Soon...  :hammer\_pick:
 
+## 2023-07-12✔️
+
+* Fixed the bug related to timeStamp format in `v1/exchange.marketdata/liveTrades`
+
 ## 2023-06-21✔️
 
 * volumeTypes object in the light ticker will be sent only if there is data that is not 0&#x20;
