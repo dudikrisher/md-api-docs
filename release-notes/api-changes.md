@@ -4,6 +4,15 @@
 
 ....
 
+## v1.20.0 (TBD)
+
+* New API to disseminate Instrument details `v1/exchange.marketdata/instrumentList`
+* New API to disseminate Calendar details `v1/exchange.marketdata/calendarList`
+* New API to disseminate tickSize details `v1/exchange.marketdata/tickSizeList`
+* Changed `token` to be a required field in all Market Data APIs
+* Deprecated `environments.exchangeNum` field in all Market Data APIs
+* Bug fix on  [#livetrades](../market-data-apis/market-data/market-data-2.md#livetrades "mention") API on strategy allocated leg trades to properly display `makerSide`
+
 ## 2023-07-12✔️
 
 * Fixed the bug related to timeStamp format in `v1/exchange.marketdata/liveTrades`

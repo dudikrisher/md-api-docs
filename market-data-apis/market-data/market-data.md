@@ -12,35 +12,17 @@ Upon subscription current book state will sent,  afterward, updated book state w
 
 ### **Request**
 
-| Parameter | Type   | Description                                                      |
-| --------- | ------ | ---------------------------------------------------------------- |
-| symbol    | String | Symbol to retrieve the light tickers for                         |
-| levels    | eNum   | Price level to be returned , values can be : 1,5,10,20,100       |
-| interval  | eNum   | Response interval in milliseconds, allowed values: 100,1000,2000 |
-| decimals  | Int    | Define the grouping decimal places (empty means no grouping)     |
+<table><thead><tr><th width="130.6710763680096">Parameter</th><th width="83">Type</th><th width="469.2">Description</th></tr></thead><tbody><tr><td>symbol</td><td>String</td><td>Symbol to retrieve the light tickers for </td></tr><tr><td>levels</td><td>eNum</td><td>Price level to be returned , values can be : 1,5,10,20,100</td></tr><tr><td>interval</td><td>eNum</td><td>Response interval in milliseconds, allowed values: 100,1000,2000</td></tr><tr><td>decimals</td><td>Int</td><td>Define the grouping decimal places (empty means no grouping)</td></tr></tbody></table>
 
 ### **Response**
 
-| Parameter                 | Type           | Description                                      |
-| ------------------------- | -------------- | ------------------------------------------------ |
-| symbol                    | String         | Instrument symbol                                |
-| timeStamp                 | Unix timestamp | Timestamp where message was sent                 |
-| bids                      | \[]priceLevel  | Array of bids, sorted by price level descending  |
-| asks                      | \[]priceLevel  | Array of asks, sorted by price level ascending   |
-| priceLevel.price          | Decimal        | Price level according to the decimal in request  |
-| priceLevel.quantity       | Decimal        | Aggregated quantity for that price level         |
-| priceLevel.numberOfOrders | Int            | Aggregated number of orders for that price level |
+<table><thead><tr><th width="196.8239997035043">Parameter</th><th width="133">Type</th><th width="403.2">Description</th></tr></thead><tbody><tr><td>symbol</td><td>String</td><td>Instrument symbol </td></tr><tr><td>timeStamp</td><td>Unix timestamp</td><td>Timestamp where message was sent </td></tr><tr><td>bids</td><td>[]priceLevel</td><td>Array of bids, sorted by price level descending</td></tr><tr><td>asks</td><td>[]priceLevel</td><td>Array of asks, sorted by price level ascending</td></tr><tr><td>priceLevel.price</td><td>Decimal</td><td>Price level according to the decimal in request</td></tr><tr><td>priceLevel.quantity</td><td>Decimal</td><td>Aggregated quantity for that price level</td></tr><tr><td>priceLevel.numberOfOrders</td><td>Int</td><td>Aggregated number of orders for that price level</td></tr></tbody></table>
 
 ### **Error Codes**
 
-| Code | Message                                                                                |
-| ---- | -------------------------------------------------------------------------------------- |
-| 1    | System is unavailable                                                                  |
-| 2    | Missing fields: \[Fieldname]                                                           |
-| 3    | <p>Wrong levels |<br>Wrong interval |<br>Wrong symbol [symbol] |<br>Wrong decimals</p> |
-| 100  | Your connection is slow, please reduce data consumed                                   |
+<table><thead><tr><th width="150">Code</th><th width="554.4285714285713">Message</th></tr></thead><tbody><tr><td>1</td><td>System is unavailable</td></tr><tr><td>2</td><td>Missing fields: [Fieldname]</td></tr><tr><td>3</td><td>Wrong levels |<br>Wrong interval |<br>Wrong symbol [symbol] |<br>Wrong decimals</td></tr><tr><td>100</td><td>Your connection is slow, please reduce data consumed</td></tr></tbody></table>
 
-****
+
 
 ### **Samples**
 
