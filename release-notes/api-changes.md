@@ -4,7 +4,7 @@
 
 ....
 
-## v1.20.0 (TBD)
+## v1.20.0 (2023-10-25)✔️
 
 * New API to disseminate Instrument details `v1/exchange.marketdata/instrumentList`
 * New API to disseminate Calendar details `v1/exchange.marketdata/calendarList`
