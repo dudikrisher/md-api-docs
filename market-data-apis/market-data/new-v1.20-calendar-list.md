@@ -16,7 +16,7 @@ No request parameters
 
 ### **Response**
 
-Similar to [this](https://www.postman.com/exberry-team/workspace/admin-api/folder/6229811-94a026ea-4e5c-48ae-84f9-9980a8e58278).
+Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#94a026ea-4e5c-48ae-84f9-9980a8e58278).
 
 
 
