@@ -4,6 +4,12 @@
 
 ....
 
+## v1.22.0 (TBD)️
+
+* Added RFQ trades to the liveTrades and lightTickers APIs
+* Bugfix related to ​​`openingPrice` calculation of `lightTickers`. The system has incorrectly taken trade entries for the calculation before the fix.
+* Bugfix related to the `volumeTypes` object of `lightTickers` API. `volume` field was incorrectly returned as `value` before the fix.
+
 ## v1.20.0 (2023-10-25)✔️
 
 * New API to disseminate Instrument details `v1/exchange.marketdata/instrumentList`
