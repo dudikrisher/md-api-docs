@@ -2,9 +2,9 @@
 
 ## Coming Soon...  :hammer\_pick:
 
-....
 
-## v1.22.0 (TBD)️
+
+## v1.22.0 (2023-12-05)️✔️
 
 * Added RFQ trades to the liveTrades and lightTickers APIs
 * Bugfix related to ​​`openingPrice` calculation of `lightTickers`. The system has incorrectly taken trade entries for the calculation before the fix.

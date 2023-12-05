@@ -6,7 +6,7 @@ This API allows to get close to real time trades details happen on the market, y
 Trade will come sorted by time, old trades will come first. \
 When snapshot is completed, the last trade will be sent again, but quantity field will be set to 0.&#x20;
 
-<mark style="color:blue;">NEW</mark> This stream includes trade entry and trade cancellation.&#x20;
+This stream includes trade entry, trade cancellation <mark style="color:blue;">(NEW v1.22.0)</mark> and RFQ trades.&#x20;
 
 {% hint style="info" %}
 `qualifier:` v1/exchange.marketdata/liveTrades
@@ -18,7 +18,7 @@ When snapshot is completed, the last trade will be sent again, but quantity fiel
 
 ### **Response**
 
-<table><thead><tr><th width="100" data-type="number">Index</th><th width="129">Parameter</th><th width="123">Type</th><th width="390.2">Description</th></tr></thead><tbody><tr><td>1</td><td>price</td><td>Decimal</td><td>Trade price</td></tr><tr><td>2</td><td>quantity</td><td>Decimal</td><td>Trade quantity, for snapshot end message this will be set to 0.  <br>In case of cancellation the quantity will be negative  → quantity * (-1)</td></tr><tr><td>3</td><td>makerSide</td><td>Decimal</td><td>If resting order is Buy→ 1 else 0<br>for trade cancellation <mark style="color:blue;">NEW</mark> or trade entry → -1</td></tr><tr><td>4</td><td>timeStamp</td><td>Unix timestamp</td><td>Trade timestamp (milliseconds)</td></tr></tbody></table>
+<table><thead><tr><th width="100" data-type="number">Index</th><th width="129">Parameter</th><th width="123">Type</th><th width="390.2">Description</th></tr></thead><tbody><tr><td>1</td><td>price</td><td>Decimal</td><td>Trade price</td></tr><tr><td>2</td><td>quantity</td><td>Decimal</td><td>Trade quantity, for snapshot end message this will be set to 0.  <br>In case of cancellation the quantity will be negative  → quantity * (-1)</td></tr><tr><td>3</td><td>makerSide</td><td>Decimal</td><td>If resting order is Buy→ 1 else 0<br>for trade cancellation, trade entry and <mark style="color:blue;">(NEW v1.22.0)</mark> RFQ trades→ -1</td></tr><tr><td>4</td><td>timeStamp</td><td>Unix timestamp</td><td>Trade timestamp (milliseconds)</td></tr></tbody></table>
 
 ### **Error Codes**
 
