@@ -57,10 +57,7 @@ Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#f11697
     "quantityPrecision": "6",
     "description": "Boeing Co.",
     "quoteCurrency": "USD",
-    "category": "E",
-    "tradingModels": [
-      "CLOB"
-    ]
+    "category": "E"
   }
 }
 ```
@@ -83,9 +80,6 @@ Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#f11697
     "description": "INST 2",
     "quoteCurrency": "USD",
     "category": "E",
-    "tradingModels": [
-      "CLOB"
-    ],
     "lastMessage": "Y"
   }
 }
