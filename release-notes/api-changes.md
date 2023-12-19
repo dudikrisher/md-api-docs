@@ -4,6 +4,11 @@
 
 
 
+## v1.23.0 (TBD)️
+
+* Added `scope` to the `lightTickers` API.
+* Added `multiLegReportingType` to the `liveTrades` API.
+
 ## v1.22.0 (2023-12-05)️✔️
 
 * Added RFQ trades to the liveTrades and lightTickers APIs
