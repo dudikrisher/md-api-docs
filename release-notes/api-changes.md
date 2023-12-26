@@ -4,7 +4,7 @@
 
 
 
-## v1.23.0 (TBD)️
+##
 
 * Added `scope` to the `lightTickers` API.
 * Added `multiLegReportingType` to the `liveTrades` API.
