@@ -4,7 +4,14 @@
 
 
 
-##
+## v1.24.0 (TBD)
+
+* Changed `quoteVolume` formula of `LightTicker` to `Total(trade amount * absolute value of trade price * contract size)`. The previous formula didn’t have the `contract size`.
+* Added `deliveryStartDate` and `deliveryEndDate` to the `v1/exchange.marketdata/instrumentList`
+* Added `makerSide` to the RFQ Trades of `v1/exchange.marketdata/liveTrades`
+* Bugfix related to `quantity` of `liveTrades` messages of legs instruments of strategies. `quantity` of trades has incorrectly had the `quantity` of current trade + `quantity` of previous trade when trade prices of current and previous trades were the same.
+
+## v1.23.0 (2023-12-26)️✔️
 
 * Added `scope` to the `lightTickers` API.
 * Added `multiLegReportingType` to the `liveTrades` API.
