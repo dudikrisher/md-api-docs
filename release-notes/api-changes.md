@@ -4,7 +4,7 @@
 
 
 
-## v1.24.0 (TBD)
+## v1.24.0 (2024-01-17)✔️
 
 * Changed `quoteVolume` formula of `LightTicker` to `Total(trade amount * absolute value of trade price * contract size)`. The previous formula didn’t have the `contract size`.
 * Added `deliveryStartDate` and `deliveryEndDate` to the `v1/exchange.marketdata/instrumentList`
