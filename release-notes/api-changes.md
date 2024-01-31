@@ -4,6 +4,11 @@
 
 
 
+## v1.25.0 (TBD)️
+
+* Bugfix related to the end of the snapshot message of `v1/exchange.marketdata/liveTrades`. `multiLegReportingType` field was not returned prior to the fix.
+* Bugfix related to the required fields of `v1/exchange.marketdata/lightTickers`. The error message returned was incorrect before the fix.
+
 ## v1.24.0 (2024-01-17)✔️
 
 * Changed `quoteVolume` formula of `LightTicker` to `Total(trade amount * absolute value of trade price * contract size)`. The previous formula didn’t have the `contract size`.
