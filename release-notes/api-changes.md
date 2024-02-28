@@ -6,7 +6,7 @@
 
 * Bugfix related to the Market Data Service. `referencePrice` was not returned after restarting the service before the fix.
 
-## v1.25.0 (2024-02-07)️
+## v1.25.0 (2024-02-07)️✔️
 
 * Bugfix related to the end of the snapshot message of `v1/exchange.marketdata/liveTrades`. `multiLegReportingType` field was not returned prior to the fix.
 * Bugfix related to the required fields of `v1/exchange.marketdata/lightTickers`. The error message returned was incorrect before the fix.
