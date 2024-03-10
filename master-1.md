@@ -1,6 +1,6 @@
 # Technical Guidelines
 
-Nebula API protocol is WebSocket (unless mentioned otherwise) \
+API protocol is WebSocket (unless mentioned otherwise) \
 Any request body should be a valid `JSON`, non valid `JSON` objects will be ignored.
 
 Within the valid `JSON` please be aware that:

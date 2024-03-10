@@ -2,6 +2,12 @@
 
 ## Coming Soon...  :hammer\_pick:
 
+## v1.27.0 (TBD)️
+
+* New API for OHLCV data `v1/exchange.marketdata/aggregates`
+* New API Heartbeats (Pings) `v1/heartbeat/ping` for browser API clients
+* `tradingModels` field will always be returned by `exchange.marketdata/instrumentList`
+
 ## v1.26.0 (2024-02-28)️✔️
 
 * Bugfix related to the Market Data Service. `referencePrice` was not returned after restarting the service before the fix.
