@@ -9,6 +9,7 @@
   * [Partial Order Book](market-data-apis/market-data/market-data.md)
   * [Light Tickers](market-data-apis/market-data/market-data-1.md)
   * [Live Trades](market-data-apis/market-data/market-data-2.md)
+  * [(NEW v1.27) Aggregates](market-data-apis/market-data/new-v1.27-aggregates.md)
   * [Get Settlement Prices](market-data-apis/market-data/market-data-3.md)
   * [(NEW v1.20) Instrument List](market-data-apis/market-data/new-v1.20-instrument-list.md)
   * [(NEW v1.20) Calendar List](market-data-apis/market-data/new-v1.20-calendar-list.md)

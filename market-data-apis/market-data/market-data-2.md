@@ -51,7 +51,7 @@ This stream includes trade entry, trade cancellation <mark style="color:blue;">(
     1.21,          //quantity
     1,             //makerSide
     1648969398501, //timestamp
-    1.             //multiLegReportingType
+    1              //multiLegReportingType
   ]
 }
 ```

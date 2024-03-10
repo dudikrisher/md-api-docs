@@ -84,3 +84,59 @@ sig parameter summary table:
 
 <table><thead><tr><th width="150">sig</th><th width="338.8571428571429">Description</th></tr></thead><tbody><tr><td>1</td><td>Stream closed with success</td></tr><tr><td>2</td><td>Stream closed with failure</td></tr><tr><td>3</td><td>Stream was closed due to consumer request</td></tr></tbody></table>
 
+### Heartbeats (Pings) <a href="#websocket-heartbeats" id="websocket-heartbeats"></a>
+
+The WebSocket connection supports ping messages for the client to identify connection drops. Ping requests can be made on-demand, and the server responds to each request.
+
+It is recommended that this API should only be used for heartbeats from the browser. Use WebSocket [native ping/pong](https://datatracker.ietf.org/doc/html/rfc6455#section-5.5.2) for outher use cases.
+
+{% hint style="info" %}
+qualifier: `v1/heartbeat/ping`
+{% endhint %}
+
+### **Request Parameters**
+
+<table><thead><tr><th width="121.4">Parameter</th><th width="150">Type</th><th>Description</th></tr></thead><tbody><tr><td>d</td><td>Int</td><td>This value will be returned in the response.</td></tr></tbody></table>
+
+###
+
+### **Samples**
+
+{% tabs %}
+{% tab title="Request" %}
+<pre class="language-javascript"><code class="lang-javascript"><strong>{
+</strong>  "q": "v1/heartbeat/ping",
+  "sid": 1,
+  "d": 42
+}
+</code></pre>
+{% endtab %}
+
+{% tab title="Success Response" %}
+```javascript
+{
+  "q": "v1/heartbeat/ping",
+  "sid": 1,
+  "d": 42
+}
+```
+{% endtab %}
+
+{% tab title="Failure Response" %}
+```json
+{
+  "sig": 2,
+  "q": "v1/heartbeat/ping",
+  "errorType": "500",
+  "sid": 1,
+  "d": {
+    "errorCode": 500,
+    "errorMessage": "Failed to decode service message data"
+  }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+
+
