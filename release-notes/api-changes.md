@@ -1,7 +1,5 @@
 # API Changes
 
-## Coming Soon...  :hammer\_pick:
-
 ## v1.27.0 (2024-04-01)️✔️
 
 * New API for OHLCV data `v1/exchange.marketdata/aggregates`

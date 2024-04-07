@@ -1,4 +1,4 @@
-# (NEW v1.27) Aggregates
+# (CHANGED v1.28) Candles
 
 This API disseminates aggregated data on different time resolutions. It supports retrieving data for a given period or as a continuous stream. Updates are disseminated every 3 seconds (only in case of a change) or when the candle is closed.
 
@@ -12,12 +12,12 @@ Response description&#x20;
 This API is non real-time but close to real-time.
 
 {% hint style="info" %}
-`qualifier: v1/exchange.marketdata/aggregates`
+`qualifier: v1/exchange.marketdata/`candles
 {% endhint %}
 
 ### **Request**
 
-<table><thead><tr><th width="139.6710763680096">Parameter</th><th width="127">Type</th><th width="482.2">Description</th></tr></thead><tbody><tr><td>symbol</td><td>String</td><td>Symbol to retrieve the candles</td></tr><tr><td>from<br><code>optional</code></td><td>Int or<br>Unix timestamp</td><td><p>Candles start from </p><p>format: if <code>timespan=DAY</code>: yyyyMMdd else epoch time in seconds</p></td></tr><tr><td>to<br><code>optional</code></td><td>Int or<br>Unix timestamp</td><td><p>Candles to</p><p>Same format as <code>from</code>, refer description of <code>from</code> for more details.</p></td></tr><tr><td>timespan</td><td>eNum</td><td><p>One of below values:</p><p>MINUTE -  flat min (from 00 seconds to 59.999 seconds) </p><p>DAY - Based on trade date (starts on calendar time zone midnight)</p></td></tr></tbody></table>
+<table><thead><tr><th width="139.6710763680096">Parameter</th><th width="127">Type</th><th width="482.2">Description</th></tr></thead><tbody><tr><td>symbol</td><td>String</td><td>Symbol to retrieve the candles</td></tr><tr><td>from<br><code>optional</code></td><td>Int or<br>Unix timestamp</td><td><p>Candles start from </p><p>format: if <code>timespan=DAY</code>: yyyyMMdd else epoch time in seconds</p></td></tr><tr><td>to<br><code>optional</code></td><td>Int or<br>Unix timestamp</td><td><p>Candles to</p><p>Same format as <code>from</code>, refer description of <code>from</code> for more details.</p></td></tr><tr><td>timespan</td><td>eNum</td><td><p>One of below values:</p><p>MINUTE -  flat min (from 00 seconds to 59.999 seconds) </p><p><mark style="color:blue;">NEW 1.28.0</mark> HOUR- based on minute candle and equal to 60 min</p><p>DAY - Based on trade date (starts on calendar time zone midnight)</p></td></tr><tr><td><mark style="color:blue;">NEW 1.28.0</mark> timespan <code>optional</code></td><td>Int</td><td><p>Timespan multiplier, if not sent: 1 is default value. <br>Allowed intervals:</p><ul><li>1 MINUTE </li><li><mark style="color:blue;">NEW 1.28.0</mark>  5 MINUTE </li><li><mark style="color:blue;">NEW 1.28.0</mark>  15 MINUTE </li><li><mark style="color:blue;">NEW 1.28.0</mark>  1 HOUR</li><li><mark style="color:blue;">NEW 1.28.0</mark>  4 HOUR</li><li>1 DAY </li></ul></td></tr></tbody></table>
 
 ### **Response**
 
@@ -33,7 +33,7 @@ This API is non real-time but close to real-time.
 {% tab title="Subscription" %}
 ```json
 {
-  "q": "v1/exchange.marketdata/aggregates",
+  "q": "v1/exchange.marketdata/candles",
   "token": "eyJleGNoYW5nZUlkIjozMCwicHJvamVjdElkIjoyMDB9",
   "sid": 14,
   "d": {
@@ -48,7 +48,7 @@ This API is non real-time but close to real-time.
 {% tab title="Response (MINUTE)" %}
 ```json
 {
-  "q": "v1/exchange.marketdata/aggregates",
+  "q": "v1/exchange.marketdata/candles",
   "sid": 14,
   "d": {
     "symbol": "TEST2",
@@ -67,7 +67,7 @@ This API is non real-time but close to real-time.
 {% tab title="Response (DAY)" %}
 ```json
 {
-  "q": "v1/exchange.marketdata/aggregates",
+  "q": "v1/exchange.marketdata/candles",
   "sid": 16,
   "d": {
     "symbol": "TEST1",
@@ -87,7 +87,7 @@ This API is non real-time but close to real-time.
 ```json
 {
   "sig": 2,
-  "q": "v1/exchange.marketdata/aggregates",
+  "q": "v1/exchange.marketdata/candles",
   "errorType": "500",
   "sid": 13,
   "d": {
