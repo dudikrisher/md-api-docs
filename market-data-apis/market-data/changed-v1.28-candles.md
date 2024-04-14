@@ -4,20 +4,28 @@ This API disseminates aggregated data on different time resolutions. It supports
 
 Response description&#x20;
 
+For real time updates qualifier:&#x20;
+
+* `to` is ignored&#x20;
 * When `from` was not sent:  only new streaming messages will be sent
-* When `from` & `to` were sent: candles from that period will be returned, stream will be closed after last message.
-  * In case there are no candles in range,  system will return 1 candle which is the last candle prior to range (just before the “from”)
 * When only `from` was sent - candles from that point will be returned, stream will remain open for the new streamed messages to come
+
+<mark style="color:blue;">NEW 1.28.0</mark> For historical data qualifier: from & to must be sent&#x20;
+
+* `from` & `to` must be sent: candles from that period will be returned, stream will be closed after last message.
+  * In case there are no candles in range,  system will return 1 candle which is the last candle prior to range (just before the “from”)
 
 This API is non real-time but close to real-time.
 
 {% hint style="info" %}
-`qualifier: v1/exchange.marketdata/`candles
+`Real time updates qualifier: v1/exchange.marketdata/`candles
+
+<mark style="color:blue;">NEW 1.28.0</mark> Historical data qualifier: v1/exchange.marketdata.history/candles
 {% endhint %}
 
 ### **Request**
 
-<table><thead><tr><th width="139.6710763680096">Parameter</th><th width="127">Type</th><th width="482.2">Description</th></tr></thead><tbody><tr><td>symbol</td><td>String</td><td>Symbol to retrieve the candles</td></tr><tr><td>from<br><code>optional</code></td><td>Int or<br>Unix timestamp</td><td><p>Candles start from </p><p>format: if <code>timespan=DAY</code>: yyyyMMdd else epoch time in seconds</p></td></tr><tr><td>to<br><code>optional</code></td><td>Int or<br>Unix timestamp</td><td><p>Candles to</p><p>Same format as <code>from</code>, refer description of <code>from</code> for more details.</p></td></tr><tr><td>timespan</td><td>eNum</td><td><p>One of below values:</p><p>MINUTE -  flat min (from 00 seconds to 59.999 seconds) </p><p><mark style="color:blue;">NEW 1.28.0</mark> HOUR- based on minute candle and equal to 60 min</p><p>DAY - Based on trade date (starts on calendar time zone midnight)</p></td></tr><tr><td><mark style="color:blue;">NEW 1.28.0</mark> timespan <code>optional</code></td><td>Int</td><td><p>Timespan multiplier, if not sent: 1 is default value. <br>Allowed intervals:</p><ul><li>1 MINUTE </li><li><mark style="color:blue;">NEW 1.28.0</mark>  5 MINUTE </li><li><mark style="color:blue;">NEW 1.28.0</mark>  15 MINUTE </li><li><mark style="color:blue;">NEW 1.28.0</mark>  1 HOUR</li><li><mark style="color:blue;">NEW 1.28.0</mark>  4 HOUR</li><li>1 DAY </li></ul></td></tr></tbody></table>
+<table><thead><tr><th width="139.6710763680096">Parameter</th><th width="127">Type</th><th width="482.2">Description</th></tr></thead><tbody><tr><td>symbol</td><td>String</td><td>Symbol to retrieve the candles</td></tr><tr><td>from<br><code>optional</code></td><td>Int or<br>Unix timestamp</td><td><p>Candles start from </p><p>format: if <code>timespan=DAY</code>: yyyyMMdd else epoch time in seconds</p></td></tr><tr><td>to<br><code>optional</code></td><td>Int or<br>Unix timestamp</td><td><p>Candles to</p><p>Same format as <code>from</code>, refer description of <code>from</code> for more details.</p></td></tr><tr><td>timespan</td><td>eNum</td><td><p>One of below values:</p><p>MINUTE -  flat min (from 00 seconds to 59.999 seconds) </p><p><mark style="color:blue;">NEW 1.28.0</mark> HOUR- based on minute candle and equal to 60 min</p><p>DAY - Based on trade date (starts on calendar time zone midnight)</p></td></tr><tr><td><mark style="color:blue;">NEW 1.28.0</mark> multiplier <code>optional</code></td><td>Int</td><td><p>Timespan multiplier, if not sent: 1 is default value. <br>Allowed intervals:</p><ul><li>1 MINUTE </li><li><mark style="color:blue;">NEW 1.28.0</mark>  5 MINUTE </li><li><mark style="color:blue;">NEW 1.28.0</mark>  15 MINUTE </li><li><mark style="color:blue;">NEW 1.28.0</mark>  1 HOUR</li><li><mark style="color:blue;">NEW 1.28.0</mark>  4 HOUR</li><li>1 DAY </li></ul></td></tr></tbody></table>
 
 ### **Response**
 
@@ -30,7 +38,7 @@ This API is non real-time but close to real-time.
 ### **Samples**
 
 {% tabs %}
-{% tab title="Subscription" %}
+{% tab title="Subscription (Real Time)" %}
 ```json
 {
   "q": "v1/exchange.marketdata/candles",
@@ -39,7 +47,25 @@ This API is non real-time but close to real-time.
   "d": {
     "symbol": "AAPL",
     "timespan": "MINUTE",
+    "multiplier": 1,
     "from": 1701159900
+  }
+}
+```
+{% endtab %}
+
+{% tab title="Subscription (Hidotry)" %}
+```json
+{
+  "sid": 14,
+  "q": "v1/exchange.marketdata.history/candles",
+  "token": "eyJleGNoYW5nZUlkIjozMCwicHJvamVjdElkIjoxMTV9",
+  "d": {
+    "symbol": "Spot",
+    "timespan": "MINUTE",
+    "from": 1712970598,
+    "to": 1713094027,
+    "multiplier": 1
   }
 }
 ```

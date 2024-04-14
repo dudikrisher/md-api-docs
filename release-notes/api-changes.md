@@ -1,5 +1,20 @@
 # API Changes
 
+## v1.28.0 (Coming Soon)️✔️
+
+
+
+Candles API:
+
+* Change `v1/exchange.marketdata/aggregates` qualifier:&#x20;
+  * Real time updates qualifier: v1/exchange.marketdata/candles
+  * Historical data qualifier: v1/exchange.marketdata.history/candles
+* Add  `timespan` value: HOUR
+* Add `multiplier` parameter to support  below intervals:
+  * 5 MINUTE
+  * 15 MINUTE
+  * 4 HOUR
+
 ## v1.27.0 (2024-04-01)️✔️
 
 * New API for OHLCV data `v1/exchange.marketdata/aggregates`
