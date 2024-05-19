@@ -1,5 +1,9 @@
 # API Changes
 
+## v1.30.0 (TBD)️
+
+* Adding new fields to the light ticker to publish price limits of the instrument
+
 ## v1.28.0 (2024-04-16)️✔️
 
 Candles API:
