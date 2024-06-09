@@ -12,13 +12,9 @@ Upon successful subscription, a snapshot of all active instruments is sent. The 
 
 No request parameters
 
-
-
 ### **Response**
 
 Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#f11697b8-fc27-4c58-90d1-b15e73f47de3).
-
-###
 
 ### **Error Codes**
 
