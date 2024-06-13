@@ -11,9 +11,9 @@
   * [Live Trades](market-data-apis/market-data/market-data-2.md)
   * [(CHANGED v1.28) Candles](market-data-apis/market-data/changed-v1.28-candles.md)
   * [Get Settlement Prices](market-data-apis/market-data/market-data-3.md)
-  * [(NEW v1.20) Instrument List](market-data-apis/market-data/new-v1.20-instrument-list.md)
-  * [(NEW v1.20) Calendar List](market-data-apis/market-data/new-v1.20-calendar-list.md)
-  * [(NEW v1.20) Tick Size List](market-data-apis/market-data/new-v1.20-tick-size-list.md)
+  * [Instrument List](market-data-apis/market-data/instrument-list.md)
+  * [Calendar List](market-data-apis/market-data/calendar-list.md)
+  * [Tick Size List](market-data-apis/market-data/tick-size-list.md)
 
 ## Release Notes
 

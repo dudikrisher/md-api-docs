@@ -10,7 +10,7 @@ Within the valid `JSON` please be aware that:
 
 ### **Request Parameters**
 
-<table><thead><tr><th width="121.4">Parameter</th><th width="150">Type</th><th>Description</th></tr></thead><tbody><tr><td>q</td><td>String</td><td>qualifier, contains the method for the specific API call.</td></tr><tr><td><mark style="color:blue;">NEW</mark><br>token</td><td>String</td><td>Token is configurable value per environment, it allows accurate and efficient instrument discovery. <br>Token generation described on the <a href="./">Introduction </a>section.</td></tr><tr><td>sid</td><td>Int</td><td>stream identifier, for each WebSocket connection this is a unique identifier for the API call. Please note that as long as the sid was not ended (other by exchange or by consumer) this can’t be used again on the same WebSocket connection</td></tr><tr><td>d</td><td>Json</td><td>data object, contain the request body</td></tr></tbody></table>
+<table><thead><tr><th width="121.4">Parameter</th><th width="150">Type</th><th>Description</th></tr></thead><tbody><tr><td>q</td><td>String</td><td>qualifier, contains the method for the specific API call.</td></tr><tr><td>token</td><td>String</td><td>Token is configurable value per environment, it allows accurate and efficient instrument discovery. <br>Token generation described on the <a href="./">Introduction </a>section.</td></tr><tr><td>sid</td><td>Int</td><td>stream identifier, for each WebSocket connection this is a unique identifier for the API call. Please note that as long as the sid was not ended (other by exchange or by consumer) this can’t be used again on the same WebSocket connection</td></tr><tr><td>d</td><td>Json</td><td>data object, contain the request body</td></tr></tbody></table>
 
 ```javascript
 { 
