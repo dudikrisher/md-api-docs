@@ -25,7 +25,15 @@ volumeTypes object:
 
 <mark style="color:blue;">(NEW v1.30.0)</mark> priceLimits object:
 
-<table><thead><tr><th width="169">Name</th><th width="116">Type</th><th>Description</th></tr></thead><tbody><tr><td>dailyMinPrice</td><td>Decimal</td><td>The daily min price</td></tr><tr><td>dailyMaxPrice</td><td>Decimal</td><td>The daily max price</td></tr><tr><td>tickMinPrice</td><td>Decimal</td><td>The tick min price</td></tr><tr><td>tickMaxPrice</td><td>Decimal</td><td>The tick max price</td></tr><tr><td>minPrice</td><td>Decimal</td><td>The min price of the instrument</td></tr><tr><td>maxPrice</td><td>Decimal</td><td>The max price of the instrument</td></tr><tr><td>finalMaxPrice</td><td>Decimal</td><td><a data-footnote-ref href="#user-content-fn-1"><em>Min ([dailyMaxPrice], [tickMaxPrice], [maxPrice],[legsPriceBandMaxPrice])</em></a></td></tr><tr><td>finalMinPrice</td><td>Decimal</td><td><em>Max ([dailyMinPrice], [tickMinPrice], [minPrice], [legsPriceBandMinPrice])</em></td></tr><tr><td>legs</td><td>[] object</td><td>All the above fields for the legs</td></tr></tbody></table>
+<table><thead><tr><th width="169">Name</th><th width="116">Type</th><th>Description</th></tr></thead><tbody><tr><td>dailyMinPrice</td><td>Decimal</td><td>The daily min price</td></tr><tr><td>dailyMaxPrice</td><td>Decimal</td><td>The daily max price</td></tr><tr><td>tickMinPrice</td><td>Decimal</td><td>The tick min price</td></tr><tr><td>tickMaxPrice</td><td>Decimal</td><td>The tick max price</td></tr><tr><td>minPrice</td><td>Decimal</td><td>The min price of the instrument</td></tr><tr><td>maxPrice</td><td>Decimal</td><td>The max price of the instrument</td></tr><tr><td>finalMaxPrice</td><td>Decimal</td><td><a data-footnote-ref href="#user-content-fn-1"><em>Min ([dailyMaxPrice], [tickMaxPrice], [maxPrice],[legsPriceBandMaxPrice])</em></a></td></tr><tr><td>finalMinPrice</td><td>Decimal</td><td><em>Max ([dailyMinPrice], [tickMinPrice], [minPrice], [legsPriceBandMinPrice])</em></td></tr><tr><td>legs</td><td>[] object</td><td>All the above fields for the legs with the below field</td></tr></tbody></table>
+
+legs object:
+
+All the above fields except `finalMaxPrice` & `finalMinPrice` and the below field:
+
+| Name | Type | Description       |
+| ---- | ---- | ----------------- |
+| id   | int  | The id of the leg |
 
 ### **Samples**
 
@@ -103,10 +111,12 @@ volumeTypes object:
       "finalMaxPrice": 11.5,
       "legs": [
         {
+          "id": 1,
           "minPrice": 1,
           "maxPrice": 1000
         },
         {
+          "id": 2,
           "minPrice": 1.25,
           "maxPrice": 500
         }

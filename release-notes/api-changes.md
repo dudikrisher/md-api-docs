@@ -1,6 +1,6 @@
 # API Changes
 
-## v1.30.0 (TBD)️
+## v1.30.0 (2024-06-19)️✔️
 
 * Adding new fields to the light ticker to publish price limits of the instrument
 * Change empty message of the light ticker to not include the volume fields.
