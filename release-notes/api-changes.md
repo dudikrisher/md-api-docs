@@ -1,5 +1,9 @@
 # API Changes
 
+## v1.31.0 (TBD)️
+
+* Adding new fields to the light ticker - `tickReferencePrice` and its `timestamp`
+
 ## v1.30.0 (2024-06-19)️✔️
 
 * Adding new fields to the light ticker to publish price limits of the instrument
