@@ -88,7 +88,7 @@ sig parameter summary table:
 
 The WebSocket connection supports ping messages for the client to identify connection drops. Ping requests can be made on-demand, and the server responds to each request.
 
-It is recommended that this API should only be used for heartbeats from the browser. Use WebSocket [native ping/pong](https://datatracker.ietf.org/doc/html/rfc6455#section-5.5.2) for outher use cases.
+It is recommended that this API should only be used for heartbeats from the browser. Use WebSocket [native ping/pong](https://datatracker.ietf.org/doc/html/rfc6455#section-5.5.2) for other use cases.
 
 {% hint style="info" %}
 qualifier: `v1/heartbeat/ping`
