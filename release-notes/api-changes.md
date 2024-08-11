@@ -1,5 +1,11 @@
 # API Changes
 
+## v1.33.0 (TBD)️
+
+* Fields in `lightTickers` get adjusted when corporte actions are applied to the active orders.
+* `lightTicker` will not include data of market order during auction.
+* Adding to the [partialOrderBook](../market-data-apis/market-data/market-data.md) new objects for market orders during auction
+
 ## v1.31.0 (2024-07-16)️✔️
 
 * Adding new fields to the light ticker - `tickReferencePrice` and its `timestamp`
