@@ -5,7 +5,9 @@
 This API allows easy refresh of the instruments market data.\
 Upon subscription data for all instruments will sent, afterward, data for specific instrument will be returned only in case one of the values was changed (it will not not be sent on real time but only when interval time reached)
 
-This API is not considering trade cancellations.
+This API is not considering trade cancellations AND <mark style="color:blue;">NEW v1.33.0</mark> does not include market orders during auction.
+
+<mark style="color:blue;">(NEW v1.33.0)</mark> Some fields of the response are adjusted when corporate actions are applied to the active orders of an instrument
 
 {% hint style="info" %}
 `qualifier:` v1/exchange.marketdata/lightTickers

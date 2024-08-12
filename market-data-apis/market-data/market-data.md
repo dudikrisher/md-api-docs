@@ -16,7 +16,11 @@ Upon subscription current book state will sent,  afterward, updated book state w
 
 ### **Response**
 
-<table><thead><tr><th width="196.8239997035043">Parameter</th><th width="133">Type</th><th width="403.2">Description</th></tr></thead><tbody><tr><td>symbol</td><td>String</td><td>Instrument symbol </td></tr><tr><td>timeStamp</td><td>Unix timestamp</td><td>Timestamp where message was sent </td></tr><tr><td>bids</td><td>[]priceLevel</td><td>Array of bids, sorted by price level descending</td></tr><tr><td>asks</td><td>[]priceLevel</td><td>Array of asks, sorted by price level ascending</td></tr><tr><td>priceLevel.price</td><td>Decimal</td><td>Price level according to the decimal in request</td></tr><tr><td>priceLevel.quantity</td><td>Decimal</td><td>Aggregated quantity for that price level</td></tr><tr><td>priceLevel.numberOfOrders</td><td>Int</td><td>Aggregated number of orders for that price level</td></tr></tbody></table>
+<table><thead><tr><th width="196.8239997035043">Parameter</th><th width="135">Type</th><th width="403.2">Description</th></tr></thead><tbody><tr><td>symbol</td><td>String</td><td>Instrument symbol </td></tr><tr><td>timeStamp</td><td>Unix timestamp</td><td>Timestamp where message was sent </td></tr><tr><td>bids</td><td>[]priceLevel</td><td>Array of bids, sorted by price level descending</td></tr><tr><td>asks</td><td>[]priceLevel</td><td>Array of asks, sorted by price level ascending</td></tr><tr><td>priceLevel.price</td><td>Decimal</td><td>Price level according to the decimal in request</td></tr><tr><td>priceLevel.quantity</td><td>Decimal</td><td>Aggregated quantity for that price level</td></tr><tr><td>priceLevel.numberOfOrders</td><td>Int</td><td>Aggregated number of orders for that price level</td></tr><tr><td><mark style="color:blue;">NEW v1.33.0</mark> marketBids</td><td>marketOrders Object</td><td><p><code>optional</code></p><p>Market orders bids (only during auction)</p></td></tr><tr><td><mark style="color:blue;">NEW v1.33.0</mark> marketAsks</td><td>marketOrders Object</td><td><p><code>optional</code></p><p>Market orders asks (only during auction)</p></td></tr></tbody></table>
+
+### <mark style="color:blue;">NEW v1.33.0</mark> marketOrders **object**
+
+<table><thead><tr><th width="187">Name</th><th width="149">Type</th><th>Description</th></tr></thead><tbody><tr><td>quantity</td><td>Decimal</td><td>Aggregated quantity for market orders</td></tr><tr><td>numberOfOrders</td><td>int</td><td>Aggregated number of market orders</td></tr></tbody></table>
 
 ### **Error Codes**
 
@@ -89,6 +93,51 @@ Upon subscription current book state will sent,  afterward, updated book state w
         1.3,
         1
       ]
+    ]
+  }
+}
+```
+{% endtab %}
+
+{% tab title="Response with Makret orders During Auction" %}
+```javascript
+{
+  "q": "v1/exchange.marketdata/partialOrderBook",
+  "sid": 101,
+  "d": {
+    "symbol": "yael1",
+    "timeStamp": 1723107804960,
+    "bids": [
+      [
+        100,
+        5,
+        1
+      ],
+      [
+        95,
+        5,
+        1
+      ]
+    ],
+    "asks": [
+      [
+        110,
+        1,
+        1
+      ],
+      [
+        150,
+        5,
+        1
+      ]
+    ],
+    "marketBids": [
+      6,
+      2
+    ],
+    "marketAsks": [
+      3,
+      1
     ]
   }
 }
