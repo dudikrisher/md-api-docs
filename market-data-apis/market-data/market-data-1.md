@@ -167,7 +167,7 @@ All the above fields except `finalMaxPrice` & `finalMinPrice` and the below fiel
 
 Note: unlike other errors, in case of `Wrong symbol` , stream will continue working for the valid symbols.&#x20;
 
-This error might returned on the subscription but also in case that stream is already working but instrument was updated so that symbol is no longer active instrument.
+This error might returned on the subscription but also in case that stream is already working but instrument was updated so that symbol is no longer active instrument <mark style="color:blue;">NEW</mark> or the symbol was changed.
 
 ### **Error Samples**
 

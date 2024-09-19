@@ -9,7 +9,7 @@
   * [Partial Order Book](market-data-apis/market-data/market-data.md)
   * [Light Tickers](market-data-apis/market-data/market-data-1.md)
   * [Live Trades](market-data-apis/market-data/market-data-2.md)
-  * [(CHANGED v1.28) Candles](market-data-apis/market-data/changed-v1.28-candles.md)
+  * [Candles](market-data-apis/market-data/candles.md)
   * [Get Settlement Prices](market-data-apis/market-data/market-data-3.md)
   * [CHANGED v1.33.0 Instrument List](market-data-apis/market-data/changed-v1.33.0-instrument-list.md)
   * [Calendar List](market-data-apis/market-data/calendar-list.md)

@@ -4,6 +4,8 @@
 
 This API provides snapshot and real-time updates for instruments details.&#x20;
 
+<mark style="color:blue;">NEW v1.34.0</mark> The response is sorted by symbol (case-insensitive)
+
 **Use Cases:**
 
 1. **Retrieving All Instruments:** When all instruments are required, the API should be used without pagination and without filters.
