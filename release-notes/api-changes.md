@@ -1,6 +1,11 @@
 # API Changes
 
-## v1.33.0 (2024-08-21)️
+## v1.34.0 (TBD)️
+
+* The sorting in the instrument list is changing to be case-insensitive.
+* Added supporing Candles data adjusted for Corporate Actions
+
+## v1.33.0 (2024-08-21)️✔️
 
 * Fields in `lightTickers` get adjusted when corporate actions are applied to the active orders.
 * `lightTicker` will not include data of market order during auction.
