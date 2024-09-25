@@ -1,6 +1,6 @@
 # API Changes
 
-## v1.34.0 (TBD)️
+## v1.34.0 (2024-09-25)️✔️
 
 * The sorting in the instrument list is changing to be case-insensitive.
 * Added supporing Candles data adjusted for Corporate Actions
