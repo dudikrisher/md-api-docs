@@ -9,6 +9,7 @@
   * [Partial Order Book](market-data-apis/market-data/market-data.md)
   * [Light Tickers](market-data-apis/market-data/market-data-1.md)
   * [Live Trades](market-data-apis/market-data/market-data-2.md)
+  * [NEW v1.36.0 Auction Indicative Equilibrium Price](market-data-apis/market-data/new-v1.36.0-auction-indicative-equilibrium-price.md)
   * [Candles](market-data-apis/market-data/candles.md)
   * [Get Settlement Prices](market-data-apis/market-data/market-data-3.md)
   * [CHANGED v1.33.0 Instrument List](market-data-apis/market-data/changed-v1.33.0-instrument-list.md)

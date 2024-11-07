@@ -12,7 +12,7 @@ Upon subscription current book state will sent,  afterward, updated book state w
 
 ### **Request**
 
-<table><thead><tr><th width="130.6710763680096">Parameter</th><th width="83">Type</th><th width="469.2">Description</th></tr></thead><tbody><tr><td>symbol</td><td>String</td><td>Symbol to retrieve the light tickers for </td></tr><tr><td>levels</td><td>eNum</td><td>Price level to be returned , values can be : 1,5,10,20,100</td></tr><tr><td>interval</td><td>eNum</td><td>Response interval in milliseconds, allowed values: 100,1000,2000</td></tr><tr><td>decimals</td><td>Int</td><td>Define the grouping decimal places (empty means no grouping)</td></tr></tbody></table>
+<table><thead><tr><th width="130.6710763680096">Parameter</th><th width="83">Type</th><th width="469.2">Description</th></tr></thead><tbody><tr><td>symbol</td><td>String</td><td>Symbol to subscribe</td></tr><tr><td>levels</td><td>eNum</td><td>Price level to be returned , values can be : 1,5,10,20,100</td></tr><tr><td>interval</td><td>eNum</td><td>Response interval in milliseconds, allowed values: 100,1000,2000</td></tr><tr><td>decimals</td><td>Int</td><td>Define the grouping decimal places (empty means no grouping)</td></tr></tbody></table>
 
 ### **Response**
 

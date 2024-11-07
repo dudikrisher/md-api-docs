@@ -1,5 +1,9 @@
 # API Changes
 
+## v1.34.0 (2024-11-12)️
+
+* Adding new API to publish auction indicative price&#x20;
+
 ## v1.34.0 (2024-09-25)️✔️
 
 * The sorting in the instrument list is changing to be case-insensitive.
