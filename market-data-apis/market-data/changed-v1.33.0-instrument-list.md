@@ -22,6 +22,8 @@ This API does not include pagination and support filters on the request.&#x20;
 
 Upon successful subscription, a snapshot of all active instruments is sent. The last message of the snapshot contains `lastMessage=Y`. Any changes to the instruments after the snapshot are sent as subsequent updates.
 
+<mark style="color:blue;">NEW v1.37</mark> In cases where there are no instruments to return, the system will send an empty message.
+
 **Snapshot**-  will receive all instruments that meet the filters from the request (If no filter exists, only “Active” instruments will be sent)
 
 **Live updates-**&#x20;
@@ -45,6 +47,8 @@ Request parameters are the same as define [here ](https://documenter.getpostman.
 ### **Response**
 
 Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#c1b23770-4cc1-41b0-a035-15f3e280bbe4).
+
+NOTE: All numbers are stringified&#x20;
 
 ### **Error Codes**
 
@@ -107,6 +111,18 @@ Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#c1b237
     "description": "INST 2",
     "quoteCurrency": "USD",
     "category": "E",
+    "lastMessage": "Y"
+  }
+}
+```
+{% endtab %}
+
+{% tab title="Empty message" %}
+```javascript
+{
+  "q": "v1/exchange.marketdata/instrumentList",
+  "sid": 17,
+  "d": {
     "lastMessage": "Y"
   }
 }

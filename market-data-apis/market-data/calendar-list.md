@@ -1,8 +1,10 @@
-# (NEW v1.20) Calendar List
+# Calendar List
 
 This API provides snapshot and real-time updates for calendar details.&#x20;
 
 Upon successful subscription, a snapshot of all calendars is sent. The last message of the snapshot contains `lastMessage=Y`. Any changes to the calendars after the snapshot are sent as subsequent updates.
+
+<mark style="color:blue;">NEW v1.37</mark> In cases where there are no calendars to return, the system will send an empty message.
 
 {% hint style="info" %}
 `qualifier:` v1/exchange.marketdata/calendarList
@@ -18,7 +20,7 @@ No request parameters
 
 Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#94a026ea-4e5c-48ae-84f9-9980a8e58278).
 
-
+NOTE: All numbers are stringified&#x20;
 
 ### **Error Codes**
 
@@ -142,6 +144,18 @@ Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#94a026
     ],
     "holidays": [],
     "auctions": [],
+    "lastMessage": "Y"
+  }
+}
+```
+{% endtab %}
+
+{% tab title="Empty message" %}
+```javascript
+{
+  "q": "v1/exchange.marketdata/calendarList",
+  "sid": 17,
+  "d": {
     "lastMessage": "Y"
   }
 }

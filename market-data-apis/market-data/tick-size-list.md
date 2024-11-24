@@ -1,10 +1,10 @@
-# (NEW v1.20) Tick Size List
+# Tick Size List
 
 This API provides snapshot and real-time updates for tick size details.&#x20;
 
 Upon successful subscription, a snapshot of all tick size tables is sent. The last message of the snapshot contains `lastMessage=Y`. Any changes to the tick size tables after the snapshot are sent as subsequent updates.
 
-
+<mark style="color:blue;">NEW v1.37</mark> In cases where there are no tick size tables to return, the system will send an empty message.
 
 {% hint style="info" %}
 `qualifier:` v1/exchange.marketdata/tickSizeList
@@ -20,7 +20,7 @@ No request parameters
 
 Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#701e3523-7014-42ad-b20d-244b695b1039).
 
-
+NOTE: All numbers are stringified&#x20;
 
 ### **Error Codes**
 
@@ -82,6 +82,18 @@ Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#701e35
         "tickSize": "0.00001"
       }
     ],
+    "lastMessage": "Y"
+  }
+}
+```
+{% endtab %}
+
+{% tab title="Empty message" %}
+```javascript
+{
+  "q": "v1/exchange.marketdata/tickSizeList",
+  "sid": 10,
+  "d": {
     "lastMessage": "Y"
   }
 }
