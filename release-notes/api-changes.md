@@ -1,6 +1,11 @@
 # API Changes
 
-## v1.34.0 (2024-11-12)️
+## v1.37.0 (TBD)️
+
+* Adding an empty message to calendarList , tickSizeList , instrumentList  to handle cases where there are no entities
+* Documenting that numbers are stringified in: instrument list, calendar list, tick size list APIs
+
+## v1.36.0 (2024-11-12)️✔️
 
 * Adding new API to publish auction indicative price&#x20;
 
