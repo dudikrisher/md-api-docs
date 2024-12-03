@@ -1,6 +1,6 @@
 # API Changes
 
-## v1.37.0 (TBD)️
+## v1.37.0 (2024-12-03)️
 
 * Adding an empty message to calendarList , tickSizeList , instrumentList  to handle cases where there are no entities
 * Documenting that numbers are stringified in: instrument list, calendar list, tick size list APIs
