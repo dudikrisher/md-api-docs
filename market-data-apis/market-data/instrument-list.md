@@ -1,4 +1,4 @@
-# CHANGED v1.33.0 Instrument List
+# Instrument List
 
 ## General
 
@@ -211,7 +211,7 @@ Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#c1b237
 
 ### **Error Codes**
 
-Same as [here ](changed-v1.33.0-instrument-list.md#error-codes)
+Same as [here ](instrument-list.md#error-codes)
 
 ### **Samples**
 

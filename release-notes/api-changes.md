@@ -23,7 +23,7 @@
 * Fields in `lightTickers` get adjusted when corporate actions are applied to the active orders.
 * `lightTicker` will not include data of market order during auction.
 * Adding to the [partialOrderBook](../market-data-apis/market-data/market-data.md) new objects for market orders during auction
-* Adding to the[ instrument list](../market-data-apis/market-data/changed-v1.33.0-instrument-list.md) filters and new API with pagination.
+* Adding to the[ instrument list](../market-data-apis/market-data/instrument-list.md) filters and new API with pagination.
 
 ## v1.31.0 (2024-07-16)️
 

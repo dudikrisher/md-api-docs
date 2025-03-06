@@ -23,7 +23,7 @@ This API is not considering trade cancellations AND <mark style="color:blue;">NE
 
 volumeTypes object:
 
-<table><thead><tr><th width="124.33333333333331">Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>type</td><td>Enum</td><td><p>The type of the volume:</p><ul><li>MATCHED: Order book trades </li><li>EFRP: EFRP trade entry</li><li>BLOCK: Block trade entry </li><li>OTHER: Other trade entry</li><li>RFQ: RFQ trades</li></ul></td></tr><tr><td>volume</td><td>Decimal</td><td>Total trade volume (in base asset) for the specific volume type</td></tr></tbody></table>
+<table><thead><tr><th width="124.33333333333331">Name</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>type</td><td>Enum</td><td><p>The type of the volume:</p><ul><li><mark style="color:blue;">(CHANGED v1.41.0)</mark> <del>MATCHED</del> Matched: Order book trades </li><li><mark style="color:red;">(MOVED to Below link v1.41.0)</mark><del>EFRP</del></li><li><mark style="color:red;">(CHANGED &#x26; REMOVED v1.41.0)</mark> <del>BLOCK</del> </li><li><mark style="color:red;">(CHANGED &#x26; REMOVED v1.41.0)</mark> <del>OTHER</del> </li><li>RFQ: RFQ trades</li><li><mark style="color:blue;">(NEW v1.41.0)</mark> Refer <a href="https://documenter.getpostman.com/view/6229811/TzCV3jcq#909a5a9c-3385-43af-9569-ea3168a331e9">Admin API Trade Entry</a>/type field for additional values; all values are supported.</li></ul></td></tr><tr><td>volume</td><td>Decimal</td><td>Total trade volume (in base asset) for the specific volume type</td></tr></tbody></table>
 
 <mark style="color:blue;">(NEW v1.30.0)</mark> priceLimits object:
 
