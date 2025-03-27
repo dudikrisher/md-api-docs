@@ -4,7 +4,7 @@
 
 This API provides snapshot and real-time updates for instruments details.&#x20;
 
-<mark style="color:blue;">NEW v1.34.0</mark> The response is sorted by symbol (case-insensitive)
+The response is sorted by symbol (case-insensitive)
 
 **Use Cases:**
 
@@ -22,7 +22,7 @@ This API does not include pagination and support filters on the request.&#x20;
 
 Upon successful subscription, a snapshot of all active instruments is sent. The last message of the snapshot contains `lastMessage=Y`. Any changes to the instruments after the snapshot are sent as subsequent updates.
 
-<mark style="color:blue;">NEW v1.37</mark> In cases where there are no instruments to return, the system will send an empty message.
+In cases where there are no instruments to return, the system will send an empty message.
 
 **Snapshot**-  will receive all instruments that meet the filters from the request (If no filter exists, only “Active” instruments will be sent)
 
@@ -52,7 +52,7 @@ NOTE: All numbers are stringified&#x20;
 
 ### **Error Codes**
 
-<table><thead><tr><th width="165.27803690934905">Code</th><th width="554.4285714285713">Message</th></tr></thead><tbody><tr><td>1</td><td>System is unavailable</td></tr><tr><td><mark style="color:blue;">NEW v1.33.0</mark> 100</td><td>Missing or invalid parameter: [FieldName]</td></tr><tr><td><p><mark style="color:blue;">NEW v1.33.0</mark></p><p>102</p></td><td>Single category should be sent</td></tr><tr><td><p><mark style="color:blue;">NEW v1.33.0</mark></p><p>102</p></td><td>Wrong Sub Category</td></tr><tr><td><p><mark style="color:blue;">NEW v1.33.0</mark></p><p>102</p></td><td>Strategies category should be sent</td></tr></tbody></table>
+<table><thead><tr><th width="165.27803690934905">Code</th><th width="554.4285714285713">Message</th></tr></thead><tbody><tr><td>1</td><td>System is unavailable</td></tr><tr><td>100</td><td>Missing or invalid parameter: [FieldName]</td></tr><tr><td>102</td><td>Single category should be sent</td></tr><tr><td>102</td><td>Wrong Sub Category</td></tr><tr><td>102</td><td>Strategies category should be sent</td></tr></tbody></table>
 
 ### **Samples**
 

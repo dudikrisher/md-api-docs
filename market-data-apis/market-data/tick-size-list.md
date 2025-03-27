@@ -4,7 +4,7 @@ This API provides snapshot and real-time updates for tick size details.&#x20;
 
 Upon successful subscription, a snapshot of all tick size tables is sent. The last message of the snapshot contains `lastMessage=Y`. Any changes to the tick size tables after the snapshot are sent as subsequent updates.
 
-<mark style="color:blue;">NEW v1.37</mark> In cases where there are no tick size tables to return, the system will send an empty message.
+In cases where there are no tick size tables to return, the system will send an empty message.
 
 {% hint style="info" %}
 `qualifier:` v1/exchange.marketdata/tickSizeList
