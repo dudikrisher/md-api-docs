@@ -1,5 +1,14 @@
 # API Changes
 
+## v1.43.0 (2025-05-14)️
+
+* Removed  `groupIds` from `instrumentList` and `instrumentListWithPagination` APIs
+* Changed the stringified number fields of below APIs to non-stringified numbers
+  * `/exchange.marketdata/instrumentList`
+  * `/exchange.marketdata/instrumentListWithPagination`
+  * `/exchange.marketdata/calendarList`
+  * `/exchange.marketdata/tickSizeList`
+
 ## v1.41.0 (2025-03-11)️
 
 * Added new values and changes in some existing `volumeTypes` values of `lightTickers`&#x20;
