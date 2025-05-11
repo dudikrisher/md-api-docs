@@ -15,7 +15,7 @@ The response is sorted by symbol (case-insensitive)
 ## instrumentList
 
 {% hint style="info" %}
-`qualifier:` v1/exchange.marketdata/instrumentList
+`qualifier: v1/exchange.marketdata/instrumentList`
 {% endhint %}
 
 This API does not include pagination and support filters on the request.&#x20;
@@ -46,9 +46,12 @@ Request parameters are the same as define [here ](https://documenter.getpostman.
 
 ### **Response**
 
-Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#c1b23770-4cc1-41b0-a035-15f3e280bbe4).
+Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#c1b23770-4cc1-41b0-a035-15f3e280bbe4) <mark style="color:blue;">(NEW v1.43.0)</mark> with below changes:
 
-NOTE: All numbers are stringified&#x20;
+* `groupIds` field is not returned
+* All numbers are non-stringified
+
+<mark style="color:red;">(REMOVED v1.43.0)</mark> ~~NOTE: All numbers are stringified~~
 
 ### **Error Codes**
 
@@ -58,7 +61,7 @@ NOTE: All numbers are stringified&#x20;
 
 {% tabs %}
 {% tab title="Subscription " %}
-```
+```json
 {
   "q": "v1/exchange.marketdata/instrumentList",
   "token": "eyJleGNoYW5nZUlkIjozMCwicHJvamVjdElkIjoyMDB9",
@@ -70,19 +73,19 @@ NOTE: All numbers are stringified&#x20;
 {% endtab %}
 
 {% tab title="Snapshot " %}
-```
+```json
 {
   "q": "v1/exchange.marketdata/instrumentList",
   "sid": 13,
   "d": {
-    "id": "268",
+    "id": 268,
     "symbol": "BA",
-    "calendarId": "7",
+    "calendarId": 7,
     "activityStatus": "ACTIVE",
-    "minQuantity": "0.000001",
-    "maxQuantity": "1000000",
-    "pricePrecision": "4",
-    "quantityPrecision": "6",
+    "minQuantity": 0.000001,
+    "maxQuantity": 1000000,
+    "pricePrecision": 4,
+    "quantityPrecision": 6,
     "description": "Boeing Co.",
     "quoteCurrency": "USD",
     "category": "E",
@@ -95,19 +98,19 @@ NOTE: All numbers are stringified&#x20;
 {% endtab %}
 
 {% tab title="Last message" %}
-```
+```json
 {
   "q": "v1/exchange.marketdata/instrumentList",
   "sid": 13,
   "d": {
-    "id": "4136",
+    "id": 4136,
     "symbol": "INST2",
-    "calendarId": "7",
+    "calendarId": 7,
     "activityStatus": "ACTIVE",
-    "minQuantity": "1",
-    "maxQuantity": "1000000",
-    "pricePrecision": "0",
-    "quantityPrecision": "0",
+    "minQuantity": 1,
+    "maxQuantity": 1000000,
+    "pricePrecision": 0,
+    "quantityPrecision": 0,
     "description": "INST 2",
     "quoteCurrency": "USD",
     "category": "E",
@@ -118,7 +121,7 @@ NOTE: All numbers are stringified&#x20;
 {% endtab %}
 
 {% tab title="Empty message" %}
-```javascript
+```json
 {
   "q": "v1/exchange.marketdata/instrumentList",
   "sid": 17,
@@ -130,27 +133,27 @@ NOTE: All numbers are stringified&#x20;
 {% endtab %}
 
 {% tab title="Live updates" %}
-```
+```json
 {
   "q": "v1/exchange.marketdata/instrumentList",
   "sid": 12,
   "d": {
-    "id": "310",
+    "id": 310,
     "symbol": "bonds",
-    "calendarId": "10",
+    "calendarId": 10,
     "activityStatus": "ACTIVE",
-    "minQuantity": "0.1",
-    "maxQuantity": "77777",
-    "pricePrecision": "4",
-    "quantityPrecision": "5",
+    "minQuantity": 0.1,
+    "maxQuantity": 77777,
+    "pricePrecision": 4,
+    "quantityPrecision": 5,
     "description": "bonds instrument - try",
     "quoteCurrency": "USD",
-    "startDate": "1693475220",
-    "stopDate": "1725097620",
+    "startDate": 1693475220,
+    "stopDate": 1725097620,
     "category": "D",
     "subCategory": "B",
     "underlyingAssets": "V",
-    "coupon": "5",
+    "coupon": 5,
     "periodOfCoupon": "ANNUAL",
     "accrualConvention": "ACT_ACT",
     "maturityDate": "2024-01-01",
@@ -160,11 +163,11 @@ NOTE: All numbers are stringified&#x20;
     "minQuantityTradeEntries": [
       {
         "type": "Block",
-        "amount": "444"
+        "amount": 444
       },
       {
         "type": "EFRP",
-        "amount": "555"
+        "amount": 555
       }
     ]
   }
@@ -176,7 +179,7 @@ NOTE: All numbers are stringified&#x20;
 ## instrumentListWithPagination
 
 {% hint style="info" %}
-`qualifier:` v1/exchange.marketdata/instrumentListWithPagination
+`qualifier: v1/exchange.marketdata/instrumentListWithPagination`
 {% endhint %}
 
 This API includes pagination and filters.&#x20;
@@ -217,7 +220,7 @@ Same as [here ](instrument-list.md#error-codes)
 
 {% tabs %}
 {% tab title="Subscription " %}
-```
+```json
 {
   "q": "v1/exchange.marketdata/instrumentListWithPagination",
   "token": "ABC",
@@ -231,7 +234,7 @@ Same as [here ](instrument-list.md#error-codes)
 {% endtab %}
 
 {% tab title="Snapshot " %}
-```
+```json
 {
   "q": "v1/exchange.marketdata/instrumentListWithPagination",
   "sid": 18,
@@ -239,67 +242,67 @@ Same as [here ](instrument-list.md#error-codes)
     "messageType": "snapshot",
     "instruments": [
       {
-        "id": "123",
+        "id": 123,
         "symbol": "futures",
-        "calendarId": "10",
+        "calendarId": 10,
         "activityStatus": "ACTIVE",
-        "minQuantity": "0.1",
-        "maxQuantity": "99999",
-        "pricePrecision": "10",
-        "quantityPrecision": "10",
-        "minPrice": "1.25",
-        "maxPrice": "500",
+        "minQuantity": 0.1,
+        "maxQuantity": 99999,
+        "pricePrecision": 10,
+        "quantityPrecision": 10,
+        "minPrice": 1.25,
+        "maxPrice": 500,
         "description": "Futures instrument",
         "quoteCurrency": "USD",
-        "startDate": "1693296600",
-        "stopDate": "1819440600",
+        "startDate": 1693296600,
+        "stopDate": 1819440600,
         "category": "F",
         "subCategory": "F",
         "underlyingAssets": "F",
-        "underlyingInstrumentId": "240",
+        "underlyingInstrumentId": 240,
         "deliveryType": "P",
-        "contractSize": "10",
+        "contractSize": 10,
         "tradingModels": [
           "CLOB"
         ]
       },
       {
-        "id": "124",
+        "id": 124,
         "symbol": "option",
-        "calendarId": "10",
+        "calendarId": 10,
         "activityStatus": "ACTIVE",
-        "minQuantity": "1",
-        "maxQuantity": "99999",
-        "pricePrecision": "0",
-        "quantityPrecision": "0",
+        "minQuantity": 1,
+        "maxQuantity": 99999,
+        "pricePrecision": 0,
+        "quantityPrecision": 0,
         "description": "option instrument",
         "quoteCurrency": "USD",
-        "startDate": "1693475040",
-        "stopDate": "1725011040",
+        "startDate": 1693475040,
+        "stopDate": 1725011040,
         "category": "O",
         "subCategory": "C",
         "underlyingAssets": "O",
-        "underlyingInstrumentId": "284",
+        "underlyingInstrumentId": 284,
         "deliveryType": "P",
-        "contractSize": "10",
+        "contractSize": 10,
         "expiryDate": "2025-01-01",
-        "strike": "10",
+        "strike": 10,
         "exerciseType": "A",
         "tradingModels": [
           "CLOB"
         ]
       },
       {
-        "id": "125",
+        "id": 125,
         "symbol": "spot",
-        "calendarId": "10",
+        "calendarId": 10,
         "activityStatus": "ACTIVE",
-        "minQuantity": "1",
-        "maxQuantity": "99999",
-        "pricePrecision": "10",
-        "quantityPrecision": "10",
-        "minPrice": "1",
-        "maxPrice": "1000",
+        "minQuantity": 1,
+        "maxQuantity": 99999,
+        "pricePrecision": 10,
+        "quantityPrecision": 10,
+        "minPrice": 1,
+        "maxPrice": 1000,
         "description": "spot",
         "quoteCurrency": "USD",
         "auctions": [],
@@ -310,72 +313,72 @@ Same as [here ](instrument-list.md#error-codes)
         ]
       },
       {
-        "id": "126",
+        "id": 126,
         "symbol": "spread",
-        "calendarId": "10",
+        "calendarId": 10,
         "activityStatus": "ACTIVE",
-        "minQuantity": "1",
-        "maxQuantity": "999999",
-        "pricePrecision": "10",
-        "quantityPrecision": "10",
+        "minQuantity": 1,
+        "maxQuantity": 999999,
+        "pricePrecision": 10,
+        "quantityPrecision": 10,
         "description": "spread instrument",
         "quoteCurrency": "USD",
-        "startDate": "1693475100",
-        "stopDate": "1725011100",
+        "startDate": 1693475100,
+        "stopDate": 1725011100,
         "category": "K",
-        "underlyingInstrumentId": "240",
+        "underlyingInstrumentId": 240,
         "deliveryType": "P",
-        "contractSize": "10",
-        "dailyMinPricePercentage": "5",
-        "dailyMaxPricePercentage": "15",
-        "tickMinPricePercentage": "3",
-        "tickMaxPricePercentage": "20",
+        "contractSize": 10,
+        "dailyMinPricePercentage": 5,
+        "dailyMaxPricePercentage": 15,
+        "tickMinPricePercentage": 3,
+        "tickMaxPricePercentage": 20,
         "strategyType": "SPREAD",
-        "leg1ReferencePrice": "10",
+        "leg1ReferencePrice": 10,
         "legsInstrumentIds": [
-          "240",
-          "284"
+          240,
+          284
         ],
         "tradingModels": [
           "CLOB"
         ]
       },
       {
-        "id": "127",
+        "id": 127,
         "symbol": "spread1",
-        "calendarId": "10",
-        "activityStatus": "ACTIVE",
-        "minQuantity": "1",
-        "maxQuantity": "999999",
-        "pricePrecision": "10",
-        "quantityPrecision": "10",
+        "calendarId": 10,
+        "activityStatus": ACTIVE,
+        "minQuantity": 1,
+        "maxQuantity": 999999,
+        "pricePrecision": 10,
+        "quantityPrecision": 10,
         "description": "spread instrument",
         "quoteCurrency": "USD",
-        "startDate": "1693475100",
-        "stopDate": "1725011100",
+        "startDate": 1693475100,
+        "stopDate": 1725011100,
         "category": "K",
-        "underlyingInstrumentId": "240",
+        "underlyingInstrumentId": 240,
         "deliveryType": "P",
-        "contractSize": "10",
+        "contractSize": 10,
         "strategyType": "SPREAD",
-        "leg1ReferencePrice": "10",
+        "leg1ReferencePrice": 10,
         "legsInstrumentIds": [
-          "239",
-          "284"
+          239,
+          284
         ],
         "tradingModels": [
           "CLOB"
         ]
       },
       {
-        "id": "128",
+        "id": 128,
         "symbol": "test",
-        "calendarId": "10",
+        "calendarId": 10,
         "activityStatus": "ACTIVE",
-        "minQuantity": "0.1",
-        "maxQuantity": "9999",
-        "pricePrecision": "10",
-        "quantityPrecision": "10",
+        "minQuantity": 0.1,
+        "maxQuantity": 9999,
+        "pricePrecision": 10,
+        "quantityPrecision": 10,
         "description": "Test",
         "quoteCurrency": "USD",
         "tradingModels": [
@@ -383,7 +386,7 @@ Same as [here ](instrument-list.md#error-codes)
         ]
       }
     ],
-    "count": "6",
+    "count": 6,
     "fromSymbol": "test"
   }
 }
@@ -391,29 +394,29 @@ Same as [here ](instrument-list.md#error-codes)
 {% endtab %}
 
 {% tab title="Live Update" %}
-```
+```json
 {
   "q": "v1/exchange.marketdata/instrumentListWithPagination",
   "sid": 17,
   "d": {
     "messageType": "update",
     "instrument": {
-      "id": "310",
+      "id": 310,
       "symbol": "bonds",
-      "calendarId": "10",
+      "calendarId": 10,
       "activityStatus": "ACTIVE",
-      "minQuantity": "0.1",
-      "maxQuantity": "77777",
-      "pricePrecision": "4",
-      "quantityPrecision": "5",
+      "minQuantity": 0.1,
+      "maxQuantity": 77777,
+      "pricePrecision": 4,
+      "quantityPrecision": 5,
       "description": "bonds instrument - try",
       "quoteCurrency": "USD",
-      "startDate": "1693475220",
-      "stopDate": "1725097620",
+      "startDate": 1693475220,
+      "stopDate": 1725097620,
       "category": "D",
       "subCategory": "B",
       "underlyingAssets": "V",
-      "coupon": "5",
+      "coupon": 5,
       "periodOfCoupon": "ANNUAL",
       "accrualConvention": "ACT_ACT",
       "maturityDate": "2024-01-01",
@@ -423,11 +426,11 @@ Same as [here ](instrument-list.md#error-codes)
       "minQuantityTradeEntries": [
         {
           "type": "Block",
-          "amount": "444"
+          "amount": 444
         },
         {
           "type": "EFRP",
-          "amount": "555"
+          "amount": 555
         }
       ]
     }

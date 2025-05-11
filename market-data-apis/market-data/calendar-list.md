@@ -7,7 +7,7 @@ Upon successful subscription, a snapshot of all calendars is sent. The last mess
 In cases where there are no calendars to return, the system will send an empty message.
 
 {% hint style="info" %}
-`qualifier:` v1/exchange.marketdata/calendarList
+`qualifier: v1/exchange.marketdata/calendarList`
 {% endhint %}
 
 ### **Request**
@@ -18,9 +18,11 @@ No request parameters
 
 ### **Response**
 
-Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#94a026ea-4e5c-48ae-84f9-9980a8e58278).
+Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#94a026ea-4e5c-48ae-84f9-9980a8e58278). <mark style="color:blue;">(NEW v1.43.0)</mark> with below changes:
 
-NOTE: All numbers are stringified&#x20;
+* All numbers are non-stringified
+
+<mark style="color:red;">(REMOVED v1.43.0)</mark> NOTE: All numbers are stringified&#x20;
 
 ### **Error Codes**
 
@@ -47,13 +49,13 @@ NOTE: All numbers are stringified&#x20;
 ```javascript
 {
   "q": "v1/exchange.marketdata/calendarList",
-  "sid": 13,
+  "sid": 14,
   "d": {
-    "id": "2692",
+    "id": 2692,
     "name": "cal3",
     "timeZone": "+05:30",
     "marketOpen": "09:30",
-    "marketClose": "16:00",
+    "marketClose": "12:37",
     "tradingDays": [
       "MONDAY",
       "TUESDAY",
@@ -63,22 +65,12 @@ NOTE: All numbers are stringified&#x20;
       "SATURDAY",
       "SUNDAY"
     ],
-    "holidays": [
-      {
-        "date": "2023-10-20",
-        "closeTime": "13:30",
-        "name": "Holiday 1"
-      },
-      {
-        "date": "2023-10-25",
-        "name": "Holiday 2"
-      }
-    ],
+    "holidays": [],
     "auctions": [
       {
         "days": [],
         "startTimes": [],
-        "duration": "300000",
+        "duration": 300000,
         "matchingAlgorithm": "EQUILIBRIUM_PRICE",
         "allowedTimeInForces": [
           "GTC",
@@ -90,15 +82,13 @@ NOTE: All numbers are stringified&#x20;
           "LIT",
           "INDICATIVE_PRICE"
         ],
-        "auctionType": "MANY_TO_MANY",
-        "indicativePriceFrequency": "1000",
         "trigger": "Resume",
         "overrideReferencePrice": false
       },
       {
         "days": [],
         "startTimes": [],
-        "duration": "900000",
+        "duration": 900000,
         "matchingAlgorithm": "EQUILIBRIUM_PRICE",
         "allowedTimeInForces": [
           "GTC",
@@ -110,15 +100,37 @@ NOTE: All numbers are stringified&#x20;
           "LIT",
           "INDICATIVE_PRICE"
         ],
-        "auctionType": "ONE_TO_MANY",
-        "buyMpList": [
-          "14"
-        ],
-        "indicativePriceFrequency": "1000",
         "trigger": "AutoResume",
         "overrideReferencePrice": false
+      },
+      {
+        "days": [
+          "MONDAY",
+          "TUESDAY",
+          "WEDNESDAY",
+          "THURSDAY",
+          "FRIDAY",
+          "SATURDAY",
+          "SUNDAY"
+        ],
+        "startTimes": [
+          "17:14:00"
+        ],
+        "duration": 300000,
+        "matchingAlgorithm": "EQUILIBRIUM_PRICE",
+        "allowedTimeInForces": [
+          "GTC",
+          "GTD",
+          "GAA"
+        ],
+        "eventsModes": [
+          "INDICATIVE_PRICE"
+        ],
+        "trigger": "TimeBased",
+        "overrideReferencePrice": false
       }
-    ]
+    ],
+    "lastEodDate": "2025-03-13"
   }
 }
 ```
@@ -130,7 +142,7 @@ NOTE: All numbers are stringified&#x20;
   "q": "v1/exchange.marketdata/calendarList",
   "sid": 13,
   "d": {
-    "id": "2692",
+    "id": 2692,
     "name": "cal3",
     "timeZone": "+05:30",
     "tradingDays": [

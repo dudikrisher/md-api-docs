@@ -7,7 +7,7 @@ This API allows easy refresh of the book state without the need to calculate the
 Upon subscription current book state will sent,  afterward, updated book state will be sent only in case it was changed (it will not not be sent on real time but only when interval time reached).
 
 {% hint style="info" %}
-`qualifier:` v1/exchange.marketdata/partialOrderBook
+`qualifier: v1/exchange.marketdata/partialOrderBook`
 {% endhint %}
 
 ### **Request**

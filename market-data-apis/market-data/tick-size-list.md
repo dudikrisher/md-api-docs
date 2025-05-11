@@ -7,7 +7,7 @@ Upon successful subscription, a snapshot of all tick size tables is sent. The la
 In cases where there are no tick size tables to return, the system will send an empty message.
 
 {% hint style="info" %}
-`qualifier:` v1/exchange.marketdata/tickSizeList
+`qualifier: v1/exchange.marketdata/tickSizeList`
 {% endhint %}
 
 ### **Request**
@@ -18,9 +18,11 @@ No request parameters
 
 ### **Response**
 
-Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#701e3523-7014-42ad-b20d-244b695b1039).
+Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#701e3523-7014-42ad-b20d-244b695b1039). <mark style="color:blue;">(NEW v1.43.0)</mark> with below changes:
 
-NOTE: All numbers are stringified&#x20;
+* All numbers are non-stringified
+
+<mark style="color:red;">(REMOVED v1.43.0)</mark> ~~NOTE: All numbers are stringified~~&#x20;
 
 ### **Error Codes**
 
@@ -47,17 +49,17 @@ NOTE: All numbers are stringified&#x20;
 ```javascript
 {
   "q": "v1/exchange.marketdata/tickSizeList",
-  "sid": 14,
+  "sid": 15,
   "d": {
-    "id": "1044",
-    "name": "Group1",
+    "id": 1045,
+    "name": "Group 2",
     "items": [
       {
-        "price": "1",
-        "tickSize": "0.01"
+        "price": 2,
+        "tickSize": 0.001
       },
       {
-        "tickSize": "0.0001"
+        "tickSize": 0.00001
       }
     ]
   }
@@ -76,13 +78,12 @@ NOTE: All numbers are stringified&#x20;
     "items": [
       {
         "price": "2",
-        "tickSize": "0.001"
+        "tickSize": 0.001
       },
       {
-        "tickSize": "0.00001"
+        "tickSize": 0.00001
       }
-    ],
-    "lastMessage": "Y"
+    ]
   }
 }
 ```

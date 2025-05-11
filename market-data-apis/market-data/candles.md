@@ -27,9 +27,9 @@ below fields of  the response are adjusted for Corporate Actions:
 * vwa
 
 {% hint style="info" %}
-`Real time updates qualifier: v1/exchange.marketdata/`candles
+`Real time updates qualifier: v1/exchange.marketdata/candles`
 
-Historical data qualifier: `v1/exchange.marketdata.history/candles`
+`Historical data qualifier: v1/exchange.marketdata.history/candles`
 {% endhint %}
 
 ### **Request**
