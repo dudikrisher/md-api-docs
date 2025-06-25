@@ -1,5 +1,9 @@
 # API Changes
 
+## v1.45.0 (2025-06-26)
+
+Allow to configure all APIs to require authentication &#x20;
+
 ## v1.43.0 (2025-05-14)️
 
 * Removed  `groupIds` from `instrumentList` and `instrumentListWithPagination` APIs
