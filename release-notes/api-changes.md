@@ -2,7 +2,8 @@
 
 ## v1.45.0 (2025-06-26)
 
-Allow to configure all APIs to require authentication &#x20;
+* Allow to configure all APIs to require authentication
+* Improve [master-1.md](../master-1.md "mention") section to support 2 access modes  &#x20;
 
 ## v1.43.0 (2025-05-14)️
 
