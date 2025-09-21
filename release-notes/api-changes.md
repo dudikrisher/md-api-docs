@@ -1,5 +1,10 @@
 # API Changes
 
+## v1.47.0 (TBD)
+
+* Consider leg trades on candles generation
+* Added new values to `volumeTypes` values of `lightTickers` - Reversal
+
 ## v1.45.0 (2025-06-26)
 
 * Allow to configure all APIs to require authentication
