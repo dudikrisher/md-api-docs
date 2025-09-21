@@ -10,7 +10,7 @@ This API is not considering trade cancellations AND does not include market orde
 Some fields of the response are adjusted when corporate actions are applied to the active orders of an instrument
 
 {% hint style="info" %}
-`qualifier: v1/exchange.marketdata/lightTickers`
+qualifier: v1/exchange.marketdata/lightTickers
 {% endhint %}
 
 ### **Request**

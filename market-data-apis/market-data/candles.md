@@ -1,6 +1,6 @@
 # Candles
 
-This API disseminates aggregated data on different time resolutions. It supports retrieving data for a given period or as a continuous stream. Updates are disseminated every 3 seconds (only in case of a change) or when the candle is closed.
+This API disseminates aggregated data on different time resolutions. It supports retrieving data for a given period or as a continuous stream. Updates are disseminated every 3 seconds (only in case of a change) or when the candle is closed.&#x20;
 
 Response description&#x20;
 
@@ -27,9 +27,9 @@ below fields of  the response are adjusted for Corporate Actions:
 * vwa
 
 {% hint style="info" %}
-`Real time updates qualifier: v1/exchange.marketdata/candles`
+Real time updates qualifier: v1/exchange.marketdata/candles
 
-`Historical data qualifier: v1/exchange.marketdata.history/candles`
+Historical data qualifier: v1/exchange.marketdata.history/candles
 {% endhint %}
 
 ### **Request**

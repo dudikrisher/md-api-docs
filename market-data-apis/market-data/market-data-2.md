@@ -9,7 +9,7 @@ When snapshot is completed, the last trade will be sent again, but quantity fiel
 This stream includes trade entry, trade cancellation and RFQ trades.&#x20;
 
 {% hint style="info" %}
-`qualifier: v1/exchange.marketdata/liveTrades`
+qualifier: v1/exchange.marketdata/liveTrades
 {% endhint %}
 
 ### **Request**

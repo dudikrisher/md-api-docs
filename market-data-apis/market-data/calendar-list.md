@@ -7,7 +7,7 @@ Upon successful subscription, a snapshot of all calendars is sent. The last mess
 In cases where there are no calendars to return, the system will send an empty message.
 
 {% hint style="info" %}
-`qualifier: v1/exchange.marketdata/calendarList`
+qualifier: v1/exchange.marketdata/calendarList
 {% endhint %}
 
 ### **Request**
@@ -18,11 +18,9 @@ No request parameters
 
 ### **Response**
 
-Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#94a026ea-4e5c-48ae-84f9-9980a8e58278). <mark style="color:blue;">(NEW v1.43.0)</mark> with below changes:
+Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#94a026ea-4e5c-48ae-84f9-9980a8e58278) with below changes:
 
 * All numbers are non-stringified
-
-<mark style="color:red;">(REMOVED v1.43.0)</mark> NOTE: All numbers are stringified&#x20;
 
 ### **Error Codes**
 

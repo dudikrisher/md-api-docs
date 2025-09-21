@@ -6,7 +6,7 @@ This API allows  retrieve the settlement prices for all instruments or for a spe
 Stream is bounded stream, after sending the relvant responses, stream will be closed.&#x20;
 
 {% hint style="info" %}
-`qualifier:` v1/exchange.marketdata/getSettlementPrices
+qualifier: v1/exchange.marketdata/getSettlementPrices
 {% endhint %}
 
 ### **Request**

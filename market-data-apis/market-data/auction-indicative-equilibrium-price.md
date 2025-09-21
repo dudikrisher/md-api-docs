@@ -5,7 +5,7 @@ auctionIndicativeEP
 This API provides close to real-time updates for auction indicative equilibrium price.&#x20;
 
 {% hint style="info" %}
-`qualifier: v1/exchange.marketdata/auctionIndicativeEP`
+qualifier: v1/exchange.marketdata/auctionIndicativeEP
 {% endhint %}
 
 ### **Request**

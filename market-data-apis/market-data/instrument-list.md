@@ -15,7 +15,7 @@ The response is sorted by symbol (case-insensitive)
 ## instrumentList
 
 {% hint style="info" %}
-`qualifier: v1/exchange.marketdata/instrumentList`
+qualifier: v1/exchange.marketdata/instrumentList
 {% endhint %}
 
 This API does not include pagination and support filters on the request.&#x20;
@@ -46,12 +46,10 @@ Request parameters are the same as define [here ](https://documenter.getpostman.
 
 ### **Response**
 
-Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#c1b23770-4cc1-41b0-a035-15f3e280bbe4) <mark style="color:blue;">(NEW v1.43.0)</mark> with below changes:
+Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#c1b23770-4cc1-41b0-a035-15f3e280bbe4) with below changes:
 
 * `groupIds` field is not returned
 * All numbers are non-stringified
-
-<mark style="color:red;">(REMOVED v1.43.0)</mark> ~~NOTE: All numbers are stringified~~
 
 ### **Error Codes**
 
