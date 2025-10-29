@@ -2,9 +2,7 @@
 
 Exberry Market Data API offers access to aggregated, close to real time market data.
 
-{% hint style="info" %}
-endpoint : wss://api-gateway.uat.exberry-uat.io
-{% endhint %}
+> endpoint : wss://api-gateway.uat.exberry-uat.io
 
 The Market Data API supports two access modes:
 
@@ -18,4 +16,5 @@ Access is restricted to authorized parties only. Authentication is required via 
 
 You can retrieve your token from Admin Application home page:
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="_/assets/image.png" alt=""><figcaption></figcaption></figure>
+

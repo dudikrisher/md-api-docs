@@ -4,9 +4,8 @@ auctionIndicativeEP
 
 This API provides close to real-time updates for auction indicative equilibrium price.&#x20;
 
-{% hint style="info" %}
-qualifier: v1/exchange.marketdata/auctionIndicativeEP
-{% endhint %}
+>qualifier: v1/exchange.marketdata/auctionIndicativeEP
+
 
 ### **Request**
 
@@ -28,8 +27,8 @@ Similar to [this](https://docs.exberry.io/ws/market-data#auction-indicative-equi
 
 ### **Samples**
 
-{% tabs %}
-{% tab title="Subscription" %}
+
+Subscription
 ```json
 {
   "q": "v1/exchange.marketdata/auctionIndicativeEP",
@@ -41,9 +40,9 @@ Similar to [this](https://docs.exberry.io/ws/market-data#auction-indicative-equi
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Response" %}
+
+Response
 ```json
 {
   "q": "v1/exchange.marketdata/auctionIndicativeEP",
@@ -62,5 +61,5 @@ Similar to [this](https://docs.exberry.io/ws/market-data#auction-indicative-equi
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+

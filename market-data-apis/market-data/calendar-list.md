@@ -6,9 +6,8 @@ Upon successful subscription, a snapshot of all calendars is sent. The last mess
 
 In cases where there are no calendars to return, the system will send an empty message.
 
-{% hint style="info" %}
-qualifier: v1/exchange.marketdata/calendarList
-{% endhint %}
+>qualifier: v1/exchange.marketdata/calendarList
+
 
 ### **Request**
 
@@ -30,9 +29,9 @@ Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#94a026
 
 ### **Samples**
 
-{% tabs %}
-{% tab title="Subscription" %}
-```javascript
+
+Subscription
+```json
 {
   "q": "v1/exchange.marketdata/calendarList",
   "token": "eyJleGNoYW5nZUlkIjozMCwicHJvamVjdElkIjoyMDB9",
@@ -41,10 +40,10 @@ Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#94a026
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Response" %}
-```javascript
+
+Response
+```json
 {
   "q": "v1/exchange.marketdata/calendarList",
   "sid": 14,
@@ -132,10 +131,10 @@ Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#94a026
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Last message" %}
-```javascript
+
+Last message
+```json
 {
   "q": "v1/exchange.marketdata/calendarList",
   "sid": 13,
@@ -158,10 +157,10 @@ Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#94a026
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Empty message" %}
-```javascript
+
+Empty message
+```json
 {
   "q": "v1/exchange.marketdata/calendarList",
   "sid": 17,
@@ -170,8 +169,8 @@ Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#94a026
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 
 

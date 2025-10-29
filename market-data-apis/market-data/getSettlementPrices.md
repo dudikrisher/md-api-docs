@@ -5,9 +5,8 @@
 This API allows  retrieve the settlement prices for all instruments or for a specific list of instruments. \
 Stream is bounded stream, after sending the relvant responses, stream will be closed.&#x20;
 
-{% hint style="info" %}
-qualifier: v1/exchange.marketdata/getSettlementPrices
-{% endhint %}
+>qualifier: v1/exchange.marketdata/getSettlementPrices
+
 
 ### **Request**
 
@@ -23,8 +22,8 @@ qualifier: v1/exchange.marketdata/getSettlementPrices
 
 ### **Samples**
 
-{% tabs %}
-{% tab title="Request" %}
+
+Request
 ```json
 {
   "q": "v1/exchange.marketdata/getSettlementPrices",
@@ -38,9 +37,9 @@ qualifier: v1/exchange.marketdata/getSettlementPrices
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Response" %}
+
+Response
 ```json
 {
   "q": "v1/exchange.marketdata/getSettlementPrices",
@@ -52,9 +51,9 @@ qualifier: v1/exchange.marketdata/getSettlementPrices
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Stream Closure" %}
+
+Stream Closure
 ```json
 {
   "sig": 1,
@@ -62,5 +61,5 @@ qualifier: v1/exchange.marketdata/getSettlementPrices
   "sid": 10
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+

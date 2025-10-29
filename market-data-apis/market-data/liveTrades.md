@@ -8,9 +8,8 @@ When snapshot is completed, the last trade will be sent again, but quantity fiel
 
 This stream includes trade entry, trade cancellation and RFQ trades.&#x20;
 
-{% hint style="info" %}
-qualifier: v1/exchange.marketdata/liveTrades
-{% endhint %}
+>qualifier: v1/exchange.marketdata/liveTrades
+
 
 ### **Request**
 
@@ -26,8 +25,8 @@ qualifier: v1/exchange.marketdata/liveTrades
 
 ### **Samples**
 
-{% tabs %}
-{% tab title="Subscription" %}
+
+Subscription
 ```json
 {
   "q": "v1/exchange.marketdata/liveTrades",
@@ -39,9 +38,9 @@ qualifier: v1/exchange.marketdata/liveTrades
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Response" %}
+
+Response
 ```json
 {
   "q": "v1/exchange.marketdata/liveTrades",
@@ -55,10 +54,10 @@ qualifier: v1/exchange.marketdata/liveTrades
   ]
 }
 ```
-{% endtab %}
 
-{% tab title="End Of Snapshot" %}
-```javascript
+
+End Of Snapshot
+```json
 {
   "q": "v1/exchange.marketdata/liveTrades",
   "sid": 153,
@@ -71,9 +70,9 @@ qualifier: v1/exchange.marketdata/liveTrades
   ]
 }
 ```
-{% endtab %}
 
-{% tab title="Empty Instrument" %}
+
+Empty Instrument
 ```json
 {
   "q": "v1/exchange.marketdata/liveTrades",
@@ -87,6 +86,6 @@ qualifier: v1/exchange.marketdata/liveTrades
   ]
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+
 

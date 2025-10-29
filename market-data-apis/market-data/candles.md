@@ -26,11 +26,10 @@ below fields of  the response are adjusted for Corporate Actions:
 * volume
 * vwa
 
-{% hint style="info" %}
-Real time updates qualifier: v1/exchange.marketdata/candles
+>Real time updates qualifier: v1/exchange.marketdata/candles
 
 Historical data qualifier: v1/exchange.marketdata.history/candles
-{% endhint %}
+
 
 ### **Request**
 
@@ -46,8 +45,8 @@ Historical data qualifier: v1/exchange.marketdata.history/candles
 
 ### **Samples**
 
-{% tabs %}
-{% tab title="Subscription (Real Time)" %}
+
+Subscription (Real Time)
 ```json
 {
   "q": "v1/exchange.marketdata/candles",
@@ -61,9 +60,9 @@ Historical data qualifier: v1/exchange.marketdata.history/candles
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Subscription (Hidotry)" %}
+
+Subscription (Hidotry)
 ```json
 {
   "sid": 14,
@@ -78,9 +77,9 @@ Historical data qualifier: v1/exchange.marketdata.history/candles
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Response (MINUTE)" %}
+
+Response (MINUTE)
 ```json
 {
   "q": "v1/exchange.marketdata/candles",
@@ -97,9 +96,9 @@ Historical data qualifier: v1/exchange.marketdata.history/candles
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Response (DAY)" %}
+
+Response (DAY)
 ```json
 {
   "q": "v1/exchange.marketdata/candles",
@@ -116,9 +115,9 @@ Historical data qualifier: v1/exchange.marketdata.history/candles
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Error" %}
+
+Error
 ```json
 {
   "sig": 2,
@@ -131,5 +130,5 @@ Historical data qualifier: v1/exchange.marketdata.history/candles
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+

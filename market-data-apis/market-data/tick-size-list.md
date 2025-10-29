@@ -6,9 +6,8 @@ Upon successful subscription, a snapshot of all tick size tables is sent. The la
 
 In cases where there are no tick size tables to return, the system will send an empty message.
 
-{% hint style="info" %}
-qualifier: v1/exchange.marketdata/tickSizeList
-{% endhint %}
+>qualifier: v1/exchange.marketdata/tickSizeList
+
 
 ### **Request**
 
@@ -30,9 +29,9 @@ Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#701e35
 
 ### **Samples**
 
-{% tabs %}
-{% tab title="Subscription" %}
-```javascript
+
+Subscription
+```json
 {
   "q": "v1/exchange.marketdata/tickSizeList",
   "token": "eyJleGNoYW5nZUlkIjozMCwicHJvamVjdElkIjoyMDB9",
@@ -41,10 +40,10 @@ Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#701e35
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Response" %}
-```javascript
+
+Response
+```json
 {
   "q": "v1/exchange.marketdata/tickSizeList",
   "sid": 15,
@@ -63,10 +62,10 @@ Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#701e35
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Last message" %}
-```javascript
+
+Last message
+```json
 {
   "q": "v1/exchange.marketdata/tickSizeList",
   "sid": 14,
@@ -85,10 +84,10 @@ Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#701e35
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Empty message" %}
-```javascript
+
+Empty message
+```json
 {
   "q": "v1/exchange.marketdata/tickSizeList",
   "sid": 10,
@@ -97,8 +96,8 @@ Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#701e35
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 
 

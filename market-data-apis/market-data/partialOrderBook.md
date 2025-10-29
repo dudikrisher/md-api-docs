@@ -6,9 +6,8 @@ This API allows easy refresh of the book state without the need to calculate the
 
 Upon subscription current book state will sent,  afterward, updated book state will be sent only in case it was changed (it will not not be sent on real time but only when interval time reached).
 
-{% hint style="info" %}
-qualifier: v1/exchange.marketdata/partialOrderBook
-{% endhint %}
+>qualifier: v1/exchange.marketdata/partialOrderBook
+
 
 ### **Request**
 
@@ -30,9 +29,9 @@ qualifier: v1/exchange.marketdata/partialOrderBook
 
 ### **Samples**
 
-{% tabs %}
-{% tab title="Subscription" %}
-```javascript
+
+Subscription
+```json
 {
   "q": "v1/exchange.marketdata/partialOrderBook",
   "token": "eyJleGNoYW5nZUlkIjozMCwicHJvamVjdElkIjoyMDB9",
@@ -45,10 +44,10 @@ qualifier: v1/exchange.marketdata/partialOrderBook
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Response" %}
-```javascript
+
+Response
+```json
 {
   "q": "v1/exchange.marketdata/partialOrderBook",
   "sid": 10,
@@ -97,10 +96,10 @@ qualifier: v1/exchange.marketdata/partialOrderBook
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Response with Makret orders During Auction" %}
-```javascript
+
+Response with Makret orders During Auction
+```json
 {
   "q": "v1/exchange.marketdata/partialOrderBook",
   "sid": 101,
@@ -142,10 +141,10 @@ qualifier: v1/exchange.marketdata/partialOrderBook
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Empty Response" %}
-```javascript
+
+Empty Response
+```json
 {
   "q": "v1/exchange.marketdata/partialOrderBook",
   "sid": 13,
@@ -157,6 +156,6 @@ qualifier: v1/exchange.marketdata/partialOrderBook
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+
 

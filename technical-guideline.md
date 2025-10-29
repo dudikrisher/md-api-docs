@@ -43,9 +43,8 @@ The WebSocket connection supports ping messages for the client to identify conne
 
 It is recommended that this API should only be used for heartbeats from the browser. Use WebSocket [native ping/pong](https://datatracker.ietf.org/doc/html/rfc6455#section-5.5.2) for other use cases.
 
-{% hint style="info" %}
-qualifier: v1/heartbeat/ping
-{% endhint %}
+>qualifier: v1/heartbeat/ping
+
 
 ### **Request Parameters**
 
@@ -55,8 +54,8 @@ qualifier: v1/heartbeat/ping
 
 ### **Samples**
 
-{% tabs %}
-{% tab title="Request" %}
+
+Request
 ```json
 {
   "q": "v1/heartbeat/ping",
@@ -64,19 +63,19 @@ qualifier: v1/heartbeat/ping
   "d": 42
 }
 ```
-{% endtab %}
 
-{% tab title="Success Response" %}
-```javascript
+
+Success Response
+```json
 {
   "q": "v1/heartbeat/ping",
   "sid": 1,
   "d": 42
 }
 ```
-{% endtab %}
 
-{% tab title="Failure Response" %}
+
+Failure Response
 ```json
 {
   "sig": 2,
@@ -89,8 +88,8 @@ qualifier: v1/heartbeat/ping
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 
 

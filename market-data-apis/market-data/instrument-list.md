@@ -14,9 +14,8 @@ The response is sorted by symbol (case-insensitive)
 
 ## instrumentList
 
-{% hint style="info" %}
-qualifier: v1/exchange.marketdata/instrumentList
-{% endhint %}
+>qualifier: v1/exchange.marketdata/instrumentList
+
 
 This API does not include pagination and support filters on the request.&#x20;
 
@@ -57,8 +56,8 @@ Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#c1b237
 
 ### **Samples**
 
-{% tabs %}
-{% tab title="Subscription " %}
+
+Subscription 
 ```json
 {
   "q": "v1/exchange.marketdata/instrumentList",
@@ -68,9 +67,9 @@ Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#c1b237
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Snapshot " %}
+
+Snapshot 
 ```json
 {
   "q": "v1/exchange.marketdata/instrumentList",
@@ -93,9 +92,9 @@ Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#c1b237
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Last message" %}
+
+Last message
 ```json
 {
   "q": "v1/exchange.marketdata/instrumentList",
@@ -116,9 +115,9 @@ Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#c1b237
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Empty message" %}
+
+Empty message
 ```json
 {
   "q": "v1/exchange.marketdata/instrumentList",
@@ -128,9 +127,9 @@ Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#c1b237
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Live updates" %}
+
+Live updates
 ```json
 {
   "q": "v1/exchange.marketdata/instrumentList",
@@ -171,14 +170,13 @@ Similar to [this](https://documenter.getpostman.com/view/6229811/TzCV3jcq#c1b237
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 ## instrumentListWithPagination
 
-{% hint style="info" %}
-`qualifier: v1/exchange.marketdata/instrumentListWithPagination`
-{% endhint %}
+>`qualifier: v1/exchange.marketdata/instrumentListWithPagination`
+
 
 This API includes pagination and filters.&#x20;
 
@@ -216,8 +214,8 @@ Same as [here ](instrument-list.md#error-codes)
 
 ### **Samples**
 
-{% tabs %}
-{% tab title="Subscription " %}
+
+Subscription 
 ```json
 {
   "q": "v1/exchange.marketdata/instrumentListWithPagination",
@@ -229,9 +227,9 @@ Same as [here ](instrument-list.md#error-codes)
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Snapshot " %}
+
+Snapshot 
 ```json
 {
   "q": "v1/exchange.marketdata/instrumentListWithPagination",
@@ -389,9 +387,9 @@ Same as [here ](instrument-list.md#error-codes)
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Live Update" %}
+
+Live Update
 ```json
 {
   "q": "v1/exchange.marketdata/instrumentListWithPagination",
@@ -435,6 +433,6 @@ Same as [here ](instrument-list.md#error-codes)
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+
 

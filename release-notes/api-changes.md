@@ -173,7 +173,7 @@ All API has a new optional header parameter - we strongly recommend to use it in
 
 The parameter is called `token` and can be retrieved from Admin application under home page:
 
-<img src="../.gitbook/assets/image (3) (2).png" alt="" data-size="original">  &#x20;
+<img src="../_/assets/image (3) (2).png" alt="" data-size="original">  &#x20;
 
 
 

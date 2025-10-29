@@ -9,9 +9,8 @@ This API is not considering trade cancellations AND does not include market orde
 
 Some fields of the response are adjusted when corporate actions are applied to the active orders of an instrument
 
-{% hint style="info" %}
-qualifier: v1/exchange.marketdata/lightTickers
-{% endhint %}
+>qualifier: v1/exchange.marketdata/lightTickers
+
 
 ### **Request**
 
@@ -39,9 +38,9 @@ All the above fields except `finalMaxPrice` & `finalMinPrice` and the below fiel
 
 ### **Samples**
 
-{% tabs %}
-{% tab title="Subscription" %}
-```javascript
+
+Subscription
+```json
 {
   "q": "v1/exchange.marketdata/lightTickers",
   "token": "eyJleGNoYW5nZUlkIjozMCwicHJvamVjdElkIjoyMDB9",
@@ -53,10 +52,10 @@ All the above fields except `finalMaxPrice` & `finalMinPrice` and the below fiel
 }
 
 ```
-{% endtab %}
 
-{% tab title="Response" %}
-```javascript
+
+Response
+```json
 {
   "q": "v1/exchange.marketdata/lightTickers",
   "sid": 10,
@@ -127,9 +126,9 @@ All the above fields except `finalMaxPrice` & `finalMinPrice` and the below fiel
     }
 }
 ```
-{% endtab %}
 
-{% tab title="Empty Response" %}
+
+Empty Response
 <pre class="language-javascript"><code class="lang-javascript">//After v1.30.0
 <strong>{
 </strong>  "q": "v1/exchange.marketdata/lightTickers",
@@ -158,8 +157,8 @@ All the above fields except `finalMaxPrice` & `finalMinPrice` and the below fiel
   }
 }
 </code></pre>
-{% endtab %}
-{% endtabs %}
+
+
 
 ### **Error Codes**
 
@@ -171,8 +170,8 @@ This error might returned on the subscription but also in case that stream is al
 
 ### **Error Samples**
 
-{% tabs %}
-{% tab title="Error" %}
+
+Error
 ```json
 {
   "sig": 2,
@@ -185,9 +184,9 @@ This error might returned on the subscription but also in case that stream is al
   }
 }
 ```
-{% endtab %}
 
-{% tab title="Wrong Symbol" %}
+
+Wrong Symbol
 ```json
 {
   "q": "v1/exchange.marketdata/lightTickers",
@@ -202,7 +201,7 @@ This error might returned on the subscription but also in case that stream is al
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+
+
 
 [^1]: 
